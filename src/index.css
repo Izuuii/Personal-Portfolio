@@ -1,0 +1,94 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@layer base {
+  :root {
+    --font-sans: 'Geist', 'Outfit', system-ui, -apple-system, sans-serif;
+    --font-mono: 'Geist Mono', 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: currentColor;
+    background-color: var(--color-base-100);
+    overflow-x: hidden;
+  }
+}
+
+/* Halftone Dot Pattern Background Motif */
+.bg-halftone-dots {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.18) 1px, transparent 1px);
+  background-size: 10px 10px;
+}
+
+[data-theme="dark"] .bg-halftone-dots {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px);
+  background-size: 10px 10px;
+}
+
+.bg-halftone-dense {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.22) 1.2px, transparent 1.2px);
+  background-size: 6px 6px;
+}
+
+[data-theme="dark"] .bg-halftone-dense {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.18) 1.2px, transparent 1.2px);
+  background-size: 6px 6px;
+}
+
+/* Hairline borders */
+.border-hairline {
+  border-width: 1px;
+  border-color: rgba(140, 140, 140, 0.18);
+}
+
+.divide-hairline > * + * {
+  border-color: rgba(140, 140, 140, 0.18);
+}
+
+/* Subtle mask for halftone fadeout */
+.mask-radial-fade {
+  mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+}
+
+.mask-bottom-fade {
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+}
+
+/* Custom minimal scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(150, 150, 150, 0.3);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(150, 150, 150, 0.5);
+}
+
+/* Halftone avatar effect */
+.halftone-avatar {
+  position: relative;
+  overflow: hidden;
+  filter: contrast(160%) grayscale(100%);
+}
+
+.halftone-avatar::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at center, rgba(0,0,0,0.85) 1px, transparent 1.5px);
+  background-size: 4px 4px;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
