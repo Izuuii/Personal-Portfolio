@@ -17,13 +17,13 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-base-100 text-base-content antialiased">
+    <div className="min-h-screen bg-base-100 text-base-content antialiased overflow-x-hidden">
       {/* Sidebar Navigation */}
       <Sidebar currentPage={currentPage} setCurrentPage={handlePageChange} />
 
       {/* Main Content Area */}
-      <div className="lg:pl-60 min-h-screen w-full flex justify-center">
-        <main className="w-full max-w-4xl lg:max-w-5xl px-4 sm:px-6 lg:px-10 pt-16 lg:pt-8 transition-all duration-300">
+      <div className="lg:pl-60 min-h-screen w-full flex justify-center overflow-x-hidden">
+        <main className="w-full max-w-4xl lg:max-w-5xl px-4 sm:px-6 lg:px-10 pt-16 lg:pt-8 transition-all duration-300 overflow-x-hidden">
 
           {/* HOME PAGE VIEW */}
           {currentPage === 'home' && (

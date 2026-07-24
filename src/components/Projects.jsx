@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowUpRight, ArrowRight, ArrowLeft } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ExternalLink } from 'lucide-react';
 import ProjectModal from './ProjectModal';
 
 export default function Projects({ isPreview = false, onNavigate }) {
@@ -8,75 +8,56 @@ export default function Projects({ isPreview = false, onNavigate }) {
 
   const projects = [
     {
-      id: 'beemo',
-      title: 'BeeMo — IoT Stingless Beehive System',
-      subtitle: 'IoT-Enabled Web-Based Beehive Management System with Real-Time Temperature, Humidity, Weight Monitoring & Descriptive Analytics (Capstone Project).',
-      longDescription: 'BeeMo is a capstone project designed to enhance and improve the honey production of stingless bees through continuous monitoring and regulating of hive environmental parameters with Descriptive Analytics and interactive Chart.js telemetry dashboards.',
-      category: 'IoT & Capstone',
-      role: 'Capstone Lead & Arduino/Dev',
-      date: '2024 – 2025',
-      stack: ['HTML5', 'CSS3', 'Bootstrap', 'JavaScript', 'PHP', 'Chart.js', 'Arduino'],
-      highlights: [
-        'Led capstone team in designing an IoT web portal to enhance stingless bee honey production.',
-        'Programmed Arduino microcontrollers and sensors for continuous telemetry monitoring (temperature, humidity, beehive weight).',
-        'Built dynamic descriptive analytics dashboards and live chart visualizations using Chart.js.',
-        'Integrated PHP backend REST APIs for continuous sensor parameter logging and threshold regulation alerts.'
-      ],
-      featured: true
-    },
-    {
-      id: 'contentcraft',
-      title: 'ContentCraft — Scalable Blog Application',
-      subtitle: 'Full-stack MERN blog platform with AWS S3 image storage, user authentication (bcrypt & JWT), and full CRUD functionality.',
-      longDescription: 'ContentCraft is a scalable blog application built with MongoDB, Express.js, React.js, and Node.js. It features secure JWT authentication and password hashing with bcrypt, allowing users to create, read, update, and delete posts while uploading media directly to AWS S3.',
+      id: 'indigo-app',
+      title: 'Indigo App - Full Stack Ride-Hailing Platform',
+      subtitle: 'Engineered real-time ride-hailing & dispatch telemetry across mobile apps and Web Admin portal using WebSockets & TanStack Query.',
+      longDescription: 'Engineered during junior developer role at MK International Trading. Built end-to-end telemetry workflows across Rider App, Customer App, and Web Admin management interface using WebSockets and TanStack Query state caching.',
       category: 'Full Stack',
-      role: 'Full Stack Developer',
-      date: '2024 – 2025',
-      stack: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'AWS S3', 'Tailwind CSS', 'JWT'],
+      role: 'Junior Full Stack Developer',
+      date: 'July 2025 – Dec 2025',
+      stack: ['React Native', 'React.js', 'Node.js', 'Express.js', 'PostgreSQL', 'Firebase', 'WebSockets', 'TanStack Query'],
       highlights: [
-        'Built full-stack blog application with MongoDB, Express, React, and Node.js (MERN stack).',
-        'Implemented secure user authentication and authorization using bcrypt and JSON Web Tokens (JWT).',
-        'Integrated AWS S3 bucket storage for uploading, hosting, and displaying high-resolution blog post images.',
-        'Created full CRUD capabilities enabling users to write, edit, publish, and manage articles seamlessly.'
-      ],
-      featured: true
-    },
-    {
-      id: 'ai-chatbot',
-      title: 'Multi-Model AI Chatbot',
-      subtitle: 'Interactive Web AI Chatbot integrating ChatGPT, Gemini, and DeepSeek model APIs for intelligent conversations.',
-      longDescription: 'An interactive web-based AI chatbot that connects to multiple state-of-the-art AI model APIs (ChatGPT, Gemini, and DeepSeek) to deliver real-time intelligent responses, code analysis, and conversational capabilities.',
-      category: 'AI & Web',
-      role: 'Frontend Developer & AI Integration',
-      date: '2024 – 2025',
-      stack: ['React.js', 'Tailwind CSS', 'ChatGPT API', 'Gemini API', 'DeepSeek API'],
-      highlights: [
-        'Integrated ChatGPT, Gemini, and DeepSeek AI APIs for multi-engine conversational workflows.',
-        'Designed responsive chat interface with code snippet highlighting and real-time message streaming.',
-        'Handled API token security, prompt engineering, and smooth conversation state management.'
+        'Architected real-time rider location tracking and dispatch telemetry using WebSockets.',
+        'Engineered responsive Web Admin portal with live interactive map telemetry and user session management.',
+        'Optimized client-side data fetching with TanStack Query caching and automated push notification flows.'
       ],
       featured: true
     },
     {
       id: 'acadflow',
-      title: 'AcadFlow — DepEd Form Digitization Platform',
-      subtitle: 'Centralized Academic Records Management & DepEd School Form Digitization (SF 1 – SF 10) for Castañas National High School.',
-      longDescription: 'AcadFlow is a freelance commission project that digitizes official DepEd School Forms (SF 1–SF 10), automates report generation and certificate issuing, and provides secure role-based access for teachers, students, and school administrators.',
-      category: 'Commissions',
-      role: 'Team Leader & Freelance Dev',
+      title: 'AcadFlow - Centralized DepEd School Forms & Analytics',
+      subtitle: 'Automated reporting engine digitizing DepEd SF 1–SF 10 calculations & digital certificate generation for Castañas National High School.',
+      longDescription: 'Lead capstone & commission project designed to eliminate manual paper-based school form processing. Features automated DepEd SF 1 to SF 10 calculations, digital certificate issuance, and administrative analytics dashboards.',
+      category: 'IoT & Capstone',
+      role: 'Team Lead & Full Stack Architect',
       date: 'July 2025 – Present',
-      stack: ['React.js', 'Tailwind CSS', 'Laravel', 'MySQL', 'Zustand'],
+      stack: ['React.js', 'Tailwind CSS', 'DaisyUI', 'Laravel', 'MySQL', 'Zustand', 'Chart.js'],
       highlights: [
-        'Developed a centralized web portal digitizing and modernizing DepEd School Forms (SF 1–SF 10).',
-        'Automated reporting and certificate generation, significantly reducing manual paperwork time.',
-        'Provided secure role-based access to academic records for teachers, students, and parents.',
-        'Managed frontend state using Zustand and styled component libraries with React & Tailwind CSS.'
+        'Digitized complex DepEd School Forms (SF 1 - SF 10) calculations into automated web workflows.',
+        'Architected digital certificate generation engine with cryptographic verification tags.',
+        'Implemented role-based access control (RBAC) for Teachers, Advisers, and School Administrators.'
+      ],
+      featured: true
+    },
+    {
+      id: 'smart-egg-incubator',
+      title: 'IoT Smart Egg Incubator with Telemetry Analytics',
+      subtitle: 'Hardware-software IoT telemetry system with real-time sensor monitoring, automated climate controls, and predictive charts.',
+      longDescription: 'IoT capstone system integrating Arduino hardware sensors (DHT22 temperature, humidity, egg turning motors) with a web telemetry dashboard for live monitoring and descriptive historical analytics.',
+      category: 'IoT & Capstone',
+      role: 'IoT Engineer & Full Stack Dev',
+      date: '2024 – 2025',
+      stack: ['Arduino', 'Sensors Telemetry', 'React.js', 'Node.js', 'Express', 'Chart.js', 'MySQL'],
+      highlights: [
+        'Connected hardware microcontrollers to real-time WebSockets telemetry server.',
+        'Built live interactive telemetry charts monitoring micro-climate environmental stability.',
+        'Integrated automated SMS & web alert thresholds for temperature and humidity fluctuations.'
       ],
       featured: true
     },
     {
       id: 'appliloan',
-      title: 'AppliLoan — Cooperative Analytics System',
+      title: 'AppliLoan - Cooperative Appliance Loan Management System',
       subtitle: 'Web-Based Information Management & Descriptive Analytics System for Sariaya Multi-Purpose Cooperative.',
       longDescription: 'AppliLoan improves cooperative operations by handling appliance loan applications and client records while incorporating descriptive analytics capabilities for administrators to gain actionable insights.',
       category: 'Commissions',
@@ -109,18 +90,35 @@ export default function Projects({ isPreview = false, onNavigate }) {
     },
     {
       id: 'pitch-tents-clone',
-      title: 'Pitch-tents.co.uk Web Clone',
-      subtitle: 'Responsive pixel-perfect front-end replication of the Pitch-tents.co.uk web portal.',
-      longDescription: 'A high-fidelity front-end web replication of Pitch-tents.co.uk created to practice advanced layout structure, modern responsive design, and UI component architecture.',
+      title: 'PitchTents Outdoor Gear & Rental E-Commerce',
+      subtitle: 'Modern frontend e-commerce platform for outdoor gear rentals with interactive booking calendars and gear filter matrix.',
+      longDescription: 'A sleek, high-aesthetic e-commerce web application featuring equipment rental booking date selection, dynamic inventory search, interactive shopping cart, and smooth responsive UI micro-interactions.',
       category: 'Front-End',
-      role: 'Frontend Developer',
-      date: '2024 – 2025',
-      stack: ['React.js', 'Tailwind CSS', 'JavaScript'],
+      role: 'Frontend Engineer',
+      date: '2024',
+      stack: ['React.js', 'Tailwind CSS', 'DaisyUI', 'Zustand', 'Vite'],
       highlights: [
-        'Replicated complex layout structure and responsive breakpoints of Pitch-tents.co.uk.',
-        'Engineered custom UI components with fluid responsive scaling across mobile and desktop devices.'
+        'Built fluid rental booking calendar date pickers and dynamic price calculation state flows.',
+        'Implemented rich micro-animations using DaisyUI and Tailwind CSS design tokens.',
+        'Structured modular client-side state management with Zustand.'
       ],
       featured: false
+    },
+    {
+      id: 'ai-code-harness',
+      title: 'AI Agent Developer Harness & Custom Prompts Integration',
+      subtitle: 'Custom developer workflow automation harness connecting LLM APIs (Gemini, DeepSeek, ChatGPT) with IDE extension flows.',
+      longDescription: 'Experimental AI developer tooling harness designed to streamline codebase refactoring, automated documentation generation, and unit test suite creation using modern AI model APIs.',
+      category: 'AI & Web',
+      role: 'AI / Vibe Engineer',
+      date: '2025 – 2026',
+      stack: ['Node.js', 'Gemini API', 'DeepSeek API', 'ChatGPT API', 'TypeScript'],
+      highlights: [
+        'Built prompt engineering harnesses for code analysis, linting, and automated refactoring.',
+        'Integrated multi-provider LLM failover routing across Gemini, DeepSeek, and OpenAI endpoints.',
+        'Designed lightweight JSON response parsers for reliable developer output generation.'
+      ],
+      featured: true
     }
   ];
 
@@ -149,7 +147,7 @@ export default function Projects({ isPreview = false, onNavigate }) {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
         <div>
           <div className="text-[11px] font-mono text-base-content/50 uppercase tracking-widest flex items-center gap-2">
-            <span>01 — projects</span>
+            <span>01 — projects & engineering craft</span>
             <span className="h-px w-6 bg-base-300 inline-block" />
           </div>
           <h2 className="text-2xl font-bold tracking-tight text-base-content uppercase font-sans mt-1">
@@ -182,8 +180,9 @@ export default function Projects({ isPreview = false, onNavigate }) {
             onClick={() => setActiveModalProject(project)}
             className="relative group py-5 px-3 sm:px-4 rounded-xl hover:bg-base-200/40 transition-all duration-200 cursor-pointer flex flex-col md:flex-row md:items-center justify-between gap-4 overflow-hidden"
           >
-            {/* Subtle halftone dot matrix accent on hover (Matching Bryl Lim reference Image 2) */}
+            {/* Subtle halftone dot matrix accent on hover */}
             <div className="absolute inset-0 bg-halftone-grid opacity-0 group-hover:opacity-25 transition-opacity pointer-events-none rounded-xl mask-radial-fade" />
+
             {/* Left Details Column */}
             <div className="space-y-2 flex-1 min-w-0">
               <div className="flex flex-wrap items-center gap-2">
@@ -217,22 +216,68 @@ export default function Projects({ isPreview = false, onNavigate }) {
               </div>
             </div>
 
-            {/* Right Meta & Action Column */}
-            <div className="flex items-center justify-between md:flex-col md:items-end shrink-0 gap-2 font-mono text-xs text-base-content/50">
-              <span className="text-[11px] font-mono">{project.date}</span>
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setActiveModalProject(project);
-                }}
-                className="btn btn-ghost btn-xs font-mono text-[11px] gap-1 group-hover:bg-neutral group-hover:text-neutral-content transition-all rounded-lg"
-              >
-                Details
-                <ArrowUpRight size={11} />
+            {/* Right Meta & CTA Column */}
+            <div className="flex items-center justify-between md:justify-end gap-4 shrink-0 font-mono text-xs pt-2 md:pt-0 border-t md:border-t-0 border-base-300/30">
+              <div className="text-left md:text-right">
+                <div className="text-[11px] font-semibold text-base-content/80">
+                  {project.role}
+                </div>
+                <div className="text-[10px] text-base-content/50 uppercase tracking-wider">
+                  {project.date}
+                </div>
+              </div>
+
+              <button className="btn btn-neutral btn-xs font-mono text-[11px] gap-1 group-hover:translate-x-0.5 transition-transform">
+                <span>Details</span>
+                <ExternalLink size={11} />
               </button>
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Monochrome Halftone Tech Engine Feature Banner (Positioned Below Projects List) */}
+      <div className="mt-8 mb-6 rounded-2xl overflow-hidden bg-base-200/40 border border-base-300/40 p-4 sm:p-6 relative group">
+        <div className="absolute inset-0 bg-halftone-grid opacity-20 pointer-events-none" />
+        <div className="flex flex-col md:flex-row items-center gap-6 relative z-10">
+          {/* DaisyUI 5 hover-3d Component Wrapping the Monochrome Technical Diagram */}
+          <div className="hover-3d w-full md:w-1/2 shrink-0">
+            <figure className="rounded-xl overflow-hidden border border-base-300 bg-base-100 shadow-md">
+              <img
+                src="/projects_engine.png"
+                alt="Software Architecture & Systems Engine Diagram"
+                className="w-full h-auto object-cover contrast-125 hover:contrast-100 transition-all duration-300"
+              />
+            </figure>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+
+          {/* Architecture & Engineering Process Banner Description */}
+          <div className="space-y-3 font-sans">
+            <span className="badge badge-neutral font-mono text-[10px] uppercase tracking-wider">
+              Engineering Mindset & Craft
+            </span>
+            <h3 className="text-xl font-bold tracking-tight text-base-content uppercase">
+              HOW I ENGINEER & BUILD SYSTEMS
+            </h3>
+            <p className="text-xs text-base-content/80 leading-relaxed font-sans">
+              I approach software engineering with a product-first mindset: decomposing complex real-world requirements into modular frontend architectures, resilient backend engines, and fluid interactive user flows. Whether building enterprise ride-hailing telemetries, automating school reporting engines, or crafting cross-platform mobile apps, every system is built for speed, clean state management, and high visual polish.
+            </p>
+            <div className="flex flex-wrap gap-1.5 pt-1 font-mono text-[10px] text-base-content/70">
+              <span className="bg-base-100 px-2 py-0.5 rounded border border-base-300/60 font-semibold">MODULAR ARCHITECTURE</span>
+              <span className="bg-base-100 px-2 py-0.5 rounded border border-base-300/60 font-semibold">REAL-TIME TELEMETRY</span>
+              <span className="bg-base-100 px-2 py-0.5 rounded border border-base-300/60 font-semibold">STATE CACHING</span>
+              <span className="bg-base-100 px-2 py-0.5 rounded border border-base-300/60 font-semibold">REST & WEBSOCKET APIS</span>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Preview See More Button */}
@@ -242,7 +287,7 @@ export default function Projects({ isPreview = false, onNavigate }) {
             onClick={() => onNavigate('projects')}
             className="btn btn-neutral btn-sm font-mono text-xs gap-2 rounded-xl group"
           >
-            <span>View All Projects ({projects.length})</span>
+            <span>View All Works ({projects.length})</span>
             <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
           </button>
         </div>
