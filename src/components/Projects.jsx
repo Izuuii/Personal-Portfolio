@@ -175,68 +175,60 @@ export default function Projects({ isPreview = false, onNavigate }) {
         )}
       </div>
 
-      {/* Projects Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {/* Projects List View (Replacing Card View) */}
+      <div className="divide-y divide-base-300/40">
         {displayedProjects.map((project) => (
           <div 
             key={project.id}
-            className="group bg-base-200/40 rounded-2xl p-6 hover:bg-base-200/70 transition-all duration-300 flex flex-col justify-between"
+            onClick={() => setActiveModalProject(project)}
+            className="group py-5 px-3 sm:px-4 rounded-xl hover:bg-base-200/40 transition-all duration-200 cursor-pointer flex flex-col md:flex-row md:items-center justify-between gap-4"
           >
-            {/* Top row badge tags */}
-            <div>
-              <div className="flex items-center justify-between gap-2 mb-3">
-                <div className="flex items-center gap-1.5">
-                  <span className="badge badge-neutral font-mono text-[10px] uppercase tracking-wider px-2 py-0.5">
-                    {project.category}
-                  </span>
-                  {project.featured && (
-                    <span className="badge badge-dash font-mono text-[10px] uppercase tracking-wider px-2 py-0.5">
-                      Featured
-                    </span>
-                  )}
-                </div>
-                <span className="text-[10px] font-mono text-base-content/50">
-                  {project.date}
+            {/* Left Details Column */}
+            <div className="space-y-2 flex-1 min-w-0">
+              <div className="flex flex-wrap items-center gap-2">
+                <h3 className="text-base font-bold text-base-content tracking-tight group-hover:text-neutral transition-colors">
+                  {project.title}
+                </h3>
+                <span className="badge badge-neutral font-mono text-[9px] uppercase tracking-wider">
+                  {project.category}
                 </span>
+                {project.featured && (
+                  <span className="badge badge-ghost font-mono text-[9px] uppercase tracking-wider text-base-content/60">
+                    Featured
+                  </span>
+                )}
               </div>
 
-              {/* Title & Subtitle */}
-              <h3 className="text-base font-bold text-base-content tracking-tight group-hover:text-neutral transition-colors flex items-start justify-between gap-2">
-                <span>{project.title}</span>
-              </h3>
-              
-              <p className="text-xs text-base-content/70 mt-2 leading-relaxed line-clamp-3">
+              <p className="text-xs text-base-content/70 leading-relaxed font-sans line-clamp-2">
                 {project.subtitle}
               </p>
-            </div>
 
-            {/* Bottom Stack & Details Action */}
-            <div className="mt-6 pt-4 border-t border-base-300/40 space-y-3">
-              {/* Stack Pills */}
-              <div className="flex flex-wrap gap-1">
+              {/* Tech Stack Pills */}
+              <div className="flex flex-wrap gap-1.5 pt-1">
                 {project.stack.map((tech, idx) => (
                   <span 
                     key={idx} 
-                    className="badge badge-ghost font-mono text-[10px] text-base-content/70 bg-base-300/50 border-0 px-2 py-0.5 rounded"
+                    className="font-mono text-[10px] text-base-content/70 bg-base-200/80 px-2 py-0.5 rounded-md"
                   >
                     {tech}
                   </span>
                 ))}
               </div>
+            </div>
 
-              {/* Action Button */}
-              <div className="flex items-center justify-between pt-1">
-                <span className="text-[10px] font-mono text-base-content/50 truncate max-w-[180px]">
-                  Role: {project.role}
-                </span>
-                <button
-                  onClick={() => setActiveModalProject(project)}
-                  className="btn btn-neutral btn-xs font-mono text-[11px] gap-1 group-hover:px-3 transition-all"
-                >
-                  Details
-                  <ArrowUpRight size={11} />
-                </button>
-              </div>
+            {/* Right Meta & Action Column */}
+            <div className="flex items-center justify-between md:flex-col md:items-end shrink-0 gap-2 font-mono text-xs text-base-content/50">
+              <span className="text-[11px] font-mono">{project.date}</span>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setActiveModalProject(project);
+                }}
+                className="btn btn-ghost btn-xs font-mono text-[11px] gap-1 group-hover:bg-neutral group-hover:text-neutral-content transition-all rounded-lg"
+              >
+                Details
+                <ArrowUpRight size={11} />
+              </button>
             </div>
           </div>
         ))}

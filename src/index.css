@@ -15,6 +15,13 @@
   }
 }
 
+/* Synchronized Theme Transition for all semantic daisyUI elements */
+*, *::before, *::after {
+  transition-property: background-color, color, border-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+
 /* Halftone Dot Pattern Background Motif */
 .bg-halftone-dots {
   background-image: radial-gradient(rgba(0, 0, 0, 0.18) 1px, transparent 1px);
@@ -80,15 +87,15 @@
 .halftone-avatar {
   position: relative;
   overflow: hidden;
-  filter: contrast(160%) grayscale(100%);
 }
 
 .halftone-avatar::after {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle at center, rgba(0,0,0,0.85) 1px, transparent 1.5px);
+  background-image: radial-gradient(rgba(0, 0, 0, 0.35) 1.2px, transparent 1.2px);
   background-size: 4px 4px;
   pointer-events: none;
   mix-blend-mode: overlay;
+  opacity: 0.6;
 }

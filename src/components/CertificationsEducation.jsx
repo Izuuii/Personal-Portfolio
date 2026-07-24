@@ -9,6 +9,7 @@ import {
   ArrowRight,
   Eye
 } from 'lucide-react';
+import BounceCards from './BounceCards';
 
 export default function CertificationsEducation({ isPreview = false, onNavigate }) {
   const [selectedCertModal, setSelectedCertModal] = useState(null);
@@ -166,8 +167,27 @@ export default function CertificationsEducation({ isPreview = false, onNavigate 
     }
   ];
 
-  // Flatten all certs for preview count logic
+  // Flatten all certs
   const allCerts = categories.flatMap(c => c.certs);
+
+  // Top 5 certificates for BounceCards display on Home page
+  const bounceCerts = [
+    allCerts[0], // 1st Place Hackathon
+    allCerts[1], // IT Quiz Bee Champion
+    allCerts[2], // Full Stack Web Engineer
+    allCerts[4], // Game Dev Workshop
+    allCerts[7]  // Udemy Full Stack
+  ];
+
+  const bounceImages = bounceCerts.map(c => c.image);
+
+  const transformStyles = [
+    "rotate(7deg) translate(-260px, 0px)",
+    "rotate(-3deg) translate(-130px, -10px)",
+    "rotate(0deg) translate(0px, -18px)",
+    "rotate(4deg) translate(130px, -10px)",
+    "rotate(-7deg) translate(260px, 0px)"
+  ];
 
   return (
     <section id="certifications" className="py-10">
@@ -198,20 +218,33 @@ export default function CertificationsEducation({ isPreview = false, onNavigate 
         </p>
       </div>
 
-      <div className="space-y-12">
-        {/* Render Grouped Pure Certificate Images */}
-        {categories.map((catGroup, gIdx) => {
-          const renderedCerts = isPreview ? catGroup.certs.slice(0, 2) : catGroup.certs;
-          if (renderedCerts.length === 0) return null;
-
-          return (
+      <div className="space-y-10">
+        {/* HOME PAGE ONLY: React Bits Centered BounceCards Display (No Dark Container Boxes) */}
+        {isPreview ? (
+          <div className="py-6 flex flex-col items-center justify-center overflow-visible">
+            <BounceCards
+              className="custom-bounceCards"
+              images={bounceImages}
+              containerWidth={800}
+              containerHeight={340}
+              animationDelay={0.2}
+              animationStagger={0.08}
+              easeType="elastic.out(1, 0.5)"
+              transformStyles={transformStyles}
+              enableHover={true}
+              onCardClick={(idx) => setSelectedCertModal(bounceCerts[idx])}
+            />
+          </div>
+        ) : (
+          /* DEDICATED PAGE: Full Categorized Certificate Image Grid */
+          categories.map((catGroup, gIdx) => (
             <div key={gIdx} className="space-y-4">
               <h3 className="text-[10px] font-mono text-base-content/40 uppercase tracking-widest px-1">
                 {catGroup.name}
               </h3>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {renderedCerts.map((cert) => (
+                {catGroup.certs.map((cert) => (
                   <div
                     key={cert.id}
                     onClick={() => setSelectedCertModal(cert)}
@@ -236,59 +269,61 @@ export default function CertificationsEducation({ isPreview = false, onNavigate 
                 ))}
               </div>
             </div>
-          );
-        })}
+          ))
+        )}
 
-        {/* Education Block Below */}
-        <div id="education" className="bg-base-200/40 rounded-2xl p-6 relative overflow-hidden flex flex-col justify-between">
-          <div>
-            <div className="flex items-center justify-between pb-3 border-b border-base-300/40">
-              <div className="flex items-center gap-2.5">
-                <div className="p-2 rounded-lg bg-neutral text-neutral-content">
-                  <GraduationCap size={18} />
+        {/* Education Block Below (Only on Dedicated Page) */}
+        {!isPreview && (
+          <div id="education" className="bg-base-200/40 rounded-2xl p-6 relative overflow-hidden flex flex-col justify-between">
+            <div>
+              <div className="flex items-center justify-between pb-3 border-b border-base-300/40">
+                <div className="flex items-center gap-2.5">
+                  <div className="p-2 rounded-lg bg-neutral text-neutral-content">
+                    <GraduationCap size={18} />
+                  </div>
+                  <div>
+                    <span className="badge badge-neutral font-mono text-[10px] uppercase">Higher Education</span>
+                    <h3 className="font-bold text-base text-base-content tracking-tight mt-0.5">
+                      {education.degree}
+                    </h3>
+                  </div>
                 </div>
-                <div>
-                  <span className="badge badge-neutral font-mono text-[10px] uppercase">Higher Education</span>
-                  <h3 className="font-bold text-base text-base-content tracking-tight mt-0.5">
-                    {education.degree}
-                  </h3>
-                </div>
+                <span className="font-mono text-xs text-base-content/60 flex items-center gap-1">
+                  <Calendar size={12} />
+                  {education.years}
+                </span>
               </div>
-              <span className="font-mono text-xs text-base-content/60 flex items-center gap-1">
-                <Calendar size={12} />
-                {education.years}
-              </span>
+
+              <div className="mt-4 space-y-1">
+                <p className="text-xs font-mono font-semibold text-base-content/90">
+                  {education.institution}
+                </p>
+                <p className="text-xs text-base-content/70">
+                  Location: {education.location}
+                </p>
+              </div>
+
+              <div className="mt-4 pt-3 border-t border-base-300/40">
+                <p className="text-[11px] font-mono uppercase tracking-wider text-base-content/50 mb-2">
+                  Core Competencies & Specializations
+                </p>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-base-content/80">
+                  {education.courses.map((course, idx) => (
+                    <li key={idx} className="flex items-center gap-1.5 bg-base-100/60 p-2 rounded-md font-sans">
+                      <CheckCircle2 size={12} className="text-emerald-500 shrink-0" />
+                      <span className="text-[11px]">{course}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
 
-            <div className="mt-4 space-y-1">
-              <p className="text-xs font-mono font-semibold text-base-content/90">
-                {education.institution}
-              </p>
-              <p className="text-xs text-base-content/70">
-                Location: {education.location}
-              </p>
-            </div>
-
-            <div className="mt-4 pt-3 border-t border-base-300/40">
-              <p className="text-[11px] font-mono uppercase tracking-wider text-base-content/50 mb-2">
-                Core Competencies & Specializations
-              </p>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-base-content/80">
-                {education.courses.map((course, idx) => (
-                  <li key={idx} className="flex items-center gap-1.5 bg-base-100/60 p-2 rounded-md font-sans">
-                    <CheckCircle2 size={12} className="text-emerald-500 shrink-0" />
-                    <span className="text-[11px]">{course}</span>
-                  </li>
-                ))}
-              </ul>
+            <div className="mt-5 pt-3 border-t border-base-300/40 flex items-center justify-between text-xs font-mono">
+              <span className="text-base-content/60">Degree Status</span>
+              <span className="badge badge-ghost badge-sm font-mono text-[10px]">Graduated 2025</span>
             </div>
           </div>
-
-          <div className="mt-5 pt-3 border-t border-base-300/40 flex items-center justify-between text-xs font-mono">
-            <span className="text-base-content/60">Degree Status</span>
-            <span className="badge badge-ghost badge-sm font-mono text-[10px]">Graduated 2025</span>
-          </div>
-        </div>
+        )}
       </div>
 
       {/* Preview See More Button */}
@@ -298,7 +333,7 @@ export default function CertificationsEducation({ isPreview = false, onNavigate 
             onClick={() => onNavigate('certifications')}
             className="btn btn-neutral btn-sm font-mono text-xs gap-2 rounded-xl group"
           >
-            <span>View All Credentials ({allCerts.length})</span>
+            <span>View All Certifications ({allCerts.length})</span>
             <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
           </button>
         </div>

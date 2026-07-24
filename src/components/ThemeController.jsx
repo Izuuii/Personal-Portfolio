@@ -5,7 +5,7 @@ export default function ThemeController({ compact = false }) {
   const [themeMode, setThemeMode] = useState('system'); // 'system' | 'light' | 'dark'
   const [isMuted, setIsMuted] = useState(true);
 
-  // Apply theme to document element
+  // Apply theme to document element synchronously
   const applyTheme = (mode) => {
     let targetTheme = mode;
     if (mode === 'system') {
@@ -39,60 +39,64 @@ export default function ThemeController({ compact = false }) {
   };
 
   return (
-    <div className="inline-flex items-center gap-2 font-mono">
-      {/* Capsule Pill for System (Monitor), Light (Sun), Dark (Moon) */}
-      <div className="inline-flex items-center p-1 rounded-full bg-base-200/80 border border-base-300/60 backdrop-blur-md shadow-xs">
+    <div className="inline-flex items-center gap-1.5 font-mono">
+      {/* Mini Capsule Pill for System (Monitor), Light (Sun), Dark (Moon) */}
+      <div className="inline-flex items-center p-0.5 rounded-full bg-base-200/80 border border-base-300/60 backdrop-blur-md shadow-2xs">
         {/* System Theme Icon */}
         <button
+          type="button"
           onClick={() => changeTheme('system')}
-          className={`w-7 h-7 rounded-full flex items-center justify-center transition-all ${
+          className={`w-6 h-6 rounded-full flex items-center justify-center transition-all duration-200 ${
             themeMode === 'system'
-              ? 'bg-neutral text-neutral-content shadow-xs scale-105'
-              : 'text-base-content/60 hover:text-base-content'
+              ? 'bg-neutral text-neutral-content shadow-2xs scale-105'
+              : 'text-base-content/50 hover:text-base-content'
           }`}
           title="System Preference"
           aria-label="System Preference"
         >
-          <Monitor size={14} />
+          <Monitor size={12} />
         </button>
 
         {/* Light Theme Icon */}
         <button
+          type="button"
           onClick={() => changeTheme('light')}
-          className={`w-7 h-7 rounded-full flex items-center justify-center transition-all ${
+          className={`w-6 h-6 rounded-full flex items-center justify-center transition-all duration-200 ${
             themeMode === 'light'
-              ? 'bg-neutral text-neutral-content shadow-xs scale-105'
-              : 'text-base-content/60 hover:text-base-content'
+              ? 'bg-neutral text-neutral-content shadow-2xs scale-105'
+              : 'text-base-content/50 hover:text-base-content'
           }`}
           title="Light Mode"
           aria-label="Light Mode"
         >
-          <Sun size={14} />
+          <Sun size={12} />
         </button>
 
         {/* Dark Theme Icon */}
         <button
+          type="button"
           onClick={() => changeTheme('dark')}
-          className={`w-7 h-7 rounded-full flex items-center justify-center transition-all ${
+          className={`w-6 h-6 rounded-full flex items-center justify-center transition-all duration-200 ${
             themeMode === 'dark'
-              ? 'bg-neutral text-neutral-content shadow-xs scale-105'
-              : 'text-base-content/60 hover:text-base-content'
+              ? 'bg-neutral text-neutral-content shadow-2xs scale-105'
+              : 'text-base-content/50 hover:text-base-content'
           }`}
           title="Dark Mode"
           aria-label="Dark Mode"
         >
-          <Moon size={14} />
+          <Moon size={12} />
         </button>
       </div>
 
-      {/* Circular Sound Mute Button */}
+      {/* Mini Circular Sound Mute Button */}
       <button
+        type="button"
         onClick={() => setIsMuted(!isMuted)}
-        className="w-9 h-9 rounded-full bg-base-200/80 border border-base-300/60 backdrop-blur-md flex items-center justify-center text-base-content/60 hover:text-base-content transition-all shadow-xs active:scale-95"
+        className="w-7 h-7 rounded-full bg-base-200/80 border border-base-300/60 backdrop-blur-md flex items-center justify-center text-base-content/50 hover:text-base-content transition-all duration-200 shadow-2xs active:scale-95"
         title={isMuted ? "Unmute Audio" : "Mute Audio"}
         aria-label="Toggle Sound"
       >
-        {isMuted ? <VolumeX size={14} /> : <Volume2 size={14} />}
+        {isMuted ? <VolumeX size={12} /> : <Volume2 size={12} />}
       </button>
     </div>
   );

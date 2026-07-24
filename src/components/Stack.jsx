@@ -1,89 +1,113 @@
 import React from 'react';
-import { Layout, Server, Database, Wrench, ShieldCheck, ArrowRight, ArrowLeft } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 
 export default function Stack({ isPreview = false, onNavigate }) {
-  const skillCategories = [
+  const previewPills = [
+    'JavaScript',
+    'React',
+    'React Native',
+    'Node.js',
+    'Express',
+    'Laravel',
+    'PHP',
+    'MySQL',
+    'MongoDB',
+    'PostgreSQL',
+    'Tailwind CSS',
+    'DaisyUI',
+    'Zustand',
+    'AWS S3',
+    'Firebase',
+    'WebSockets',
+    'Chart.js',
+    'Arduino',
+    'TanStack Query',
+    'Axios'
+  ];
+
+  const fullStackCategories = [
     {
-      id: 'frontend',
-      title: 'Front-End Development',
-      icon: Layout,
-      typeTag: 'Component',
+      category: 'FRONTEND',
       skills: [
-        { name: 'React.js', level: 'Advanced', badgeClass: 'badge-neutral' },
-        { name: 'JavaScript (ES6+)', level: 'Advanced', badgeClass: 'badge-neutral' },
-        { name: 'Tailwind CSS', level: 'Advanced', badgeClass: 'badge-neutral' },
-        { name: 'DaisyUI', level: 'Advanced', badgeClass: 'badge-neutral' },
-        { name: 'TypeScript', level: 'Intermediate', badgeClass: 'badge-ghost' },
-        { name: 'HTML5 / CSS3', level: 'Advanced', badgeClass: 'badge-neutral' },
-        { name: 'Bootstrap', level: 'Intermediate', badgeClass: 'badge-ghost' },
-        { name: 'WordPress', level: 'Intermediate', badgeClass: 'badge-ghost' },
+        'JavaScript (ES6+)',
+        'TypeScript',
+        'React.js',
+        'React Native',
+        'Tailwind CSS',
+        'DaisyUI',
+        'Zustand',
+        'HTML5',
+        'CSS3',
+        'Bootstrap',
+        'Vite'
       ]
     },
     {
-      id: 'backend',
-      title: 'Back-End Development',
-      icon: Server,
-      typeTag: 'Modifier',
+      category: 'BACKEND',
       skills: [
-        { name: 'Node.js', level: 'Intermediate', badgeClass: 'badge-neutral' },
-        { name: 'Express.js', level: 'Intermediate', badgeClass: 'badge-neutral' },
-        { name: 'Laravel', level: 'Intermediate', badgeClass: 'badge-neutral' },
-        { name: 'PHP', level: 'Intermediate', badgeClass: 'badge-ghost' },
-        { name: 'REST APIs', level: 'Advanced', badgeClass: 'badge-neutral' },
-        { name: 'WebSocket', level: 'Intermediate', badgeClass: 'badge-ghost' },
-        { name: 'JWT Auth', level: 'Intermediate', badgeClass: 'badge-ghost' },
+        'Node.js',
+        'Express.js',
+        'Laravel',
+        'PHP',
+        'MySQL',
+        'MongoDB',
+        'PostgreSQL',
+        'REST APIs',
+        'WebSockets',
+        'JWT Auth',
+        'Axios',
+        'TanStack Query'
       ]
     },
     {
-      id: 'database',
-      title: 'Database & Cloud',
-      icon: Database,
-      typeTag: 'Component',
+      category: 'DEVOPS & CLOUD',
       skills: [
-        { name: 'MySQL', level: 'Advanced', badgeClass: 'badge-neutral' },
-        { name: 'MongoDB', level: 'Intermediate', badgeClass: 'badge-ghost' },
-        { name: 'PostgreSQL', level: 'Intermediate', badgeClass: 'badge-ghost' },
-        { name: 'Firebase', level: 'Intermediate', badgeClass: 'badge-ghost' },
-        { name: 'AWS S3', level: 'Basic', badgeClass: 'badge-dash' },
+        'AWS S3',
+        'Firebase',
+        'Vercel',
+        'Git',
+        'GitHub',
+        'Postman'
       ]
     },
     {
-      id: 'tools',
-      title: 'Tools & Ecosystem',
-      icon: Wrench,
-      typeTag: 'Utility',
+      category: 'IOT & EMBEDDED',
       skills: [
-        { name: 'Git & GitHub', level: 'Advanced', badgeClass: 'badge-neutral' },
-        { name: 'VS Code / Cursor', level: 'Advanced', badgeClass: 'badge-neutral' },
-        { name: 'Postman', level: 'Intermediate', badgeClass: 'badge-ghost' },
-        { name: 'Figma', level: 'Intermediate', badgeClass: 'badge-ghost' },
-        { name: 'Vercel', level: 'Intermediate', badgeClass: 'badge-ghost' },
+        'Arduino',
+        'Sensors Telemetry',
+        'Chart.js',
+        'Descriptive Analytics'
       ]
     },
     {
-      id: 'practices',
-      title: 'Engineering Practices',
-      icon: ShieldCheck,
-      typeTag: 'Standard',
+      category: 'AI & INTEGRATIONS',
       skills: [
-        { name: 'Responsive Web Design', level: 'Core', badgeClass: 'badge-neutral' },
-        { name: 'UI/UX Design', level: 'Core', badgeClass: 'badge-neutral' },
-        { name: 'Cross-Browser Compatibility', level: 'Core', badgeClass: 'badge-neutral' },
-        { name: 'Agile Methodology', level: 'Core', badgeClass: 'badge-ghost' },
-        { name: 'API Integration', level: 'Core', badgeClass: 'badge-neutral' },
+        'ChatGPT API',
+        'Gemini API',
+        'DeepSeek API',
+        'Prompt Engineering'
+      ]
+    },
+    {
+      category: 'TOOLS & UTILITIES',
+      skills: [
+        'Figma',
+        'VS Code',
+        'Cursor',
+        'Responsive Design',
+        'UI/UX Architecture',
+        'Agile Methodology'
       ]
     }
   ];
-
-  const displayedCategories = isPreview ? skillCategories.slice(0, 4) : skillCategories;
 
   return (
     <section id="stack" className="py-10">
       {/* Back to Home button on dedicated page */}
       {!isPreview && onNavigate && (
         <div className="mb-6">
-          <button 
-            onClick={() => onNavigate('home')} 
+          <button
+            onClick={() => onNavigate('home')}
             className="btn btn-ghost btn-xs font-mono text-xs gap-1.5 text-base-content/70 hover:text-base-content"
           >
             <ArrowLeft size={13} />
@@ -98,66 +122,54 @@ export default function Stack({ isPreview = false, onNavigate }) {
           <span>03 — stack</span>
           <span className="h-px w-6 bg-base-300 inline-block" />
         </div>
-        <h2 className="text-2xl font-bold tracking-tight text-base-content uppercase font-sans mt-1">
-          {isPreview ? 'Core Technical Stack' : 'Full Technical Skills & Tools'}
+        <h2 className="text-3xl font-bold tracking-tight text-base-content lowercase font-sans mt-1">
+          {isPreview ? 'Stack' : 'tech stack'}
         </h2>
+        <p className="text-xs font-mono text-base-content/60 mt-2 max-w-2xl leading-relaxed">
+          The tools, frameworks, and platforms I reach for — across the front end, back end, cloud, IoT, and AI integrations.
+        </p>
       </div>
 
-      {/* Grid of Skill Categories */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {displayedCategories.map((cat) => {
-          const Icon = cat.icon;
-          return (
-            <div 
-              key={cat.id}
-              className="bg-base-200/40 rounded-2xl p-6 hover:bg-base-200/70 transition-all duration-300"
+      {/* HOME PAGE PREVIEW: Keycap / KBD Badge UI Cloud */}
+      {isPreview ? (
+        <div className="flex flex-wrap gap-2 pt-2">
+          {previewPills.map((tech, idx) => (
+            <kbd
+              key={idx}
+              className="kbd font-mono text-xs px-3 py-1.5 bg-base-100/90 border border-base-300/80 border-b-2 border-b-base-300/90 rounded-lg shadow-2xs hover:border-neutral hover:scale-105 transition-all cursor-default text-base-content/85"
             >
-              {/* Category Title & Badge Tag */}
-              <div className="flex items-center justify-between pb-3 mb-4 border-b border-base-300/40">
-                <div className="flex items-center gap-2.5">
-                  <div className="p-2 rounded-lg bg-base-200 text-base-content">
-                    <Icon size={16} />
-                  </div>
-                  <h3 className="font-bold text-sm text-base-content tracking-tight font-sans">
-                    {cat.title}
-                  </h3>
-                </div>
-                <span className="badge badge-ghost font-mono text-[10px] uppercase text-base-content/60">
-                  {cat.typeTag}
-                </span>
-              </div>
-
-              {/* Skills Badges Pill Grid */}
+              {tech}
+            </kbd>
+          ))}
+          {onNavigate && (
+            <button
+              onClick={() => onNavigate('stack')}
+              className="kbd font-mono text-xs px-3 py-1.5 bg-transparent border border-dashed border-base-300 rounded-lg text-base-content/60 hover:text-base-content hover:border-base-content transition-all cursor-pointer"
+            >
+              + more
+            </button>
+          )}
+        </div>
+      ) : (
+        /* DEDICATED STACK PAGE: Categorized Keycap / KBD Badge Groups */
+        <div className="space-y-8 pt-2">
+          {fullStackCategories.map((catGroup, idx) => (
+            <div key={idx} className="space-y-3">
+              <h3 className="text-[11px] font-mono text-base-content/50 uppercase tracking-widest">
+                {catGroup.category}
+              </h3>
               <div className="flex flex-wrap gap-2">
-                {cat.skills.map((skill, sIdx) => (
-                  <div 
+                {catGroup.skills.map((skill, sIdx) => (
+                  <kbd
                     key={sIdx}
-                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-base-100/60 hover:bg-base-100 transition-colors"
+                    className="kbd font-mono text-xs px-3 py-1.5 bg-base-100/90 border border-base-300/80 border-b-2 border-b-base-300/90 rounded-lg shadow-2xs hover:border-neutral hover:scale-105 transition-all cursor-default text-base-content/85"
                   >
-                    <span className="text-xs font-mono font-medium text-base-content">
-                      {skill.name}
-                    </span>
-                    <span className={`badge ${skill.badgeClass} text-[9px] font-mono uppercase px-1.5 py-0.5 border-0`}>
-                      {skill.level}
-                    </span>
-                  </div>
+                    {skill}
+                  </kbd>
                 ))}
               </div>
             </div>
-          );
-        })}
-      </div>
-
-      {/* Preview See More Button */}
-      {isPreview && onNavigate && (
-        <div className="mt-8 text-center sm:text-right">
-          <button
-            onClick={() => onNavigate('stack')}
-            className="btn btn-neutral btn-sm font-mono text-xs gap-2 rounded-xl group"
-          >
-            <span>View Full Technical Stack</span>
-            <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-          </button>
+          ))}
         </div>
       )}
     </section>

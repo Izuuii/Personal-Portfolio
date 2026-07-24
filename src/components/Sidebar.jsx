@@ -24,7 +24,6 @@ export default function Sidebar({ currentPage, setCurrentPage }) {
     { id: 'experience', label: 'Experience', icon: Briefcase, badge: '3 roles' },
     { id: 'stack', label: 'Stack', icon: Layers, badge: 'Skills' },
     { id: 'certifications', label: 'Certifications', icon: Award, badge: 'New' },
-    { id: 'education', label: 'Education', icon: GraduationCap, badge: 'BSIT' },
   ];
 
   const handleNavClick = (id) => {
@@ -48,7 +47,7 @@ export default function Sidebar({ currentPage, setCurrentPage }) {
           </div>
           <div>
             <h1 className="font-semibold text-sm tracking-tight">Dan Denver De Leon</h1>
-            <p className="text-[10px] font-mono text-base-content/60 uppercase tracking-wider">Full Stack Dev</p>
+            <p className="text-[10px] font-mono text-base-content/60 uppercase tracking-wider">Vibe Engineer</p>
           </div>
         </div>
         <div className="flex items-center gap-2">
@@ -89,61 +88,52 @@ export default function Sidebar({ currentPage, setCurrentPage }) {
               </div>
             </div>
             <div className="min-w-0 flex-1">
-              <div className="flex items-center justify-between">
-                <h2 className="font-bold text-sm tracking-tight truncate group-hover:text-neutral transition-colors">
-                  Dan Denver
-                </h2>
-                <span className="flex h-2 w-2 relative">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                </span>
-              </div>
-              <p className="text-[10px] font-mono text-base-content/60 uppercase tracking-widest truncate">
-                Full Stack & UI/UX
+              <h2 className="font-bold text-sm tracking-tight truncate group-hover:text-neutral transition-colors">
+                Dan Denver
+              </h2>
+              <p className="text-[9px] font-mono text-base-content/60 uppercase tracking-widest truncate">
+                Vibe Engineer / Full Stack
               </p>
             </div>
           </div>
 
-          {/* Navigation Menu (DaisyUI Menu) */}
-          <nav className="py-2">
-            <p className="text-[9px] font-mono text-base-content/40 uppercase tracking-widest px-3 mb-2">
+          {/* Navigation Menu */}
+          <nav className="space-y-1">
+            <div className="px-3 py-1 text-[10px] font-mono uppercase tracking-widest text-base-content/40">
               Navigation
-            </p>
-            <ul className="menu menu-xs p-0 gap-1 font-mono text-xs">
-              {navItems.map((item) => {
-                const Icon = item.icon;
-                const isActive = currentPage === item.id;
-                return (
-                  <li key={item.id}>
-                    <button
-                      onClick={() => handleNavClick(item.id)}
-                      className={`
-                        flex items-center justify-between px-3 py-2 rounded-lg transition-all duration-200
-                        ${isActive 
-                          ? 'bg-neutral text-neutral-content font-medium shadow-xs' 
-                          : 'hover:bg-base-200 text-base-content/80'
-                        }
-                      `}
-                    >
-                      <span className="flex items-center gap-2">
-                        <Icon size={14} className={isActive ? 'text-neutral-content' : 'text-base-content/60'} />
-                        {item.label}
-                      </span>
-                      <span className={`badge badge-xs font-mono border-0 ${
-                        isActive ? 'badge-ghost text-neutral-content bg-white/20' : 'badge-ghost text-base-content/60 bg-base-200'
-                      }`}>
-                        {item.badge}
-                      </span>
-                    </button>
-                  </li>
-                );
-              })}
-            </ul>
+            </div>
+            {navItems.map((item) => {
+              const Icon = item.icon;
+              const isActive = currentPage === item.id;
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => handleNavClick(item.id)}
+                  className={`
+                    w-full flex items-center justify-between px-3 py-2 rounded-lg text-xs font-sans transition-all duration-200
+                    ${isActive 
+                      ? 'bg-neutral text-neutral-content font-semibold shadow-xs' 
+                      : 'hover:bg-base-200/80 text-base-content/80'
+                    }
+                  `}
+                >
+                  <span className="flex items-center gap-2.5">
+                    <Icon size={14} className={isActive ? 'text-neutral-content' : 'text-base-content/60'} />
+                    {item.label}
+                  </span>
+                  <span className={`badge badge-xs font-mono border-0 ${
+                    isActive ? 'badge-ghost text-neutral-content bg-white/20' : 'badge-ghost text-base-content/60 bg-base-200'
+                  }`}>
+                    {item.badge}
+                  </span>
+                </button>
+              );
+            })}
           </nav>
         </div>
 
-        {/* Bottom Sidebar: Contact info & Capsule Theme Controller */}
-        <div className="space-y-4 pt-4">
+        {/* Bottom Section */}
+        <div className="space-y-4 pt-4 border-t border-base-300/40">
           {/* Quick Contact Info */}
           <div className="space-y-1.5 text-[11px] font-mono">
             <a 
@@ -177,18 +167,18 @@ export default function Sidebar({ currentPage, setCurrentPage }) {
               className="flex items-center gap-2 text-base-content/70 hover:text-base-content transition-colors"
             >
               <LinkedinIcon size={12} className="shrink-0" />
-              <span className="truncate">LinkedIn Profile</span>
+              <span>LinkedIn Profile</span>
               <ExternalLink size={10} className="ml-auto opacity-50" />
             </a>
           </div>
 
-          {/* Capsule Theme Controller Component */}
-          <div className="pt-2 flex justify-center">
+          {/* Theme Switcher & Mute Bar */}
+          <div className="pt-2 flex items-center justify-between border-t border-base-300/30">
             <ThemeController />
           </div>
 
-          {/* Copyright/Version Micro label */}
-          <div className="flex items-center justify-between text-[9px] font-mono text-base-content/40 pt-1">
+          {/* Copyright Footer */}
+          <div className="text-[10px] font-mono text-base-content/40 flex items-center justify-between">
             <span>© 2026 Dan Denver</span>
             <span>v1.0.0</span>
           </div>
