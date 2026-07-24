@@ -18,23 +18,23 @@ export default function HeroHeader() {
         {/* DaisyUI hover-3d Tilt Avatar Component */}
         <div className="shrink-0 relative group">
           <div className="hover-3d">
-            {/* 9 hover-3d child trigger nodes for 3D tilt tracking */}
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div className="hover-3d-child w-36 h-36 md:w-44 md:h-44 rounded-2xl overflow-hidden shadow-xl border border-base-300 bg-base-200">
+            {/* 1st Child: Main Avatar Figure Content */}
+            <figure className="w-36 h-36 md:w-44 md:h-44 rounded-2xl overflow-hidden shadow-xl border border-base-300 bg-base-200">
               <img 
                 src="/avatar.png" 
                 alt="Dan Denver De Leon Portrait" 
                 className="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-500"
               />
-            </div>
+            </figure>
+            {/* 8 Empty Div Children for 3D Mouse Tilt Tracking Zones */}
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
           {/* Subtle Halftone Background Glow */}
           <div className="absolute -inset-1 bg-gradient-to-tr from-neutral/20 to-transparent rounded-3xl blur-md -z-10 opacity-70 group-hover:opacity-100 transition-opacity" />

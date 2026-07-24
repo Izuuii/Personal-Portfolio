@@ -5,7 +5,6 @@ import {
   Briefcase, 
   Layers, 
   Award, 
-  GraduationCap, 
   Mail, 
   Phone, 
   Menu,
@@ -82,11 +81,23 @@ export default function Sidebar({ currentPage, setCurrentPage }) {
             onClick={() => handleNavClick('home')}
             className="flex items-center gap-3 pb-3 cursor-pointer group"
           >
-            <div className="avatar placeholder">
-              <div className="w-10 rounded-full shadow-sm overflow-hidden bg-neutral text-neutral-content group-hover:scale-105 transition-transform">
-                <img src="/avatar.png" alt="Dan Denver De Leon" className="object-cover" />
+            {/* daisyUI 5 hover-3d avatar wrapper */}
+            <div className="hover-3d shrink-0">
+              <div className="avatar placeholder">
+                <div className="w-10 rounded-full shadow-sm overflow-hidden bg-neutral text-neutral-content">
+                  <img src="/avatar.png" alt="Dan Denver De Leon" className="object-cover" />
+                </div>
               </div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
             </div>
+
             <div className="min-w-0 flex-1">
               <h2 className="font-bold text-sm tracking-tight truncate group-hover:text-neutral transition-colors">
                 Dan Denver

@@ -85,7 +85,7 @@ export default function Experience({ isPreview = false, onNavigate }) {
         </p>
       </div>
 
-      {/* HOME PAGE PREVIEW: Minimal 3-Column Table Row Layout (Matching Bryl Lim reference) */}
+      {/* HOME PAGE PREVIEW: Minimal 3-Column Table Row Layout */}
       {isPreview ? (
         <div className="divide-y divide-base-300/40 border-t border-b border-base-300/40">
           {experiences.map((exp) => (
@@ -107,12 +107,12 @@ export default function Experience({ isPreview = false, onNavigate }) {
           ))}
         </div>
       ) : (
-        /* DEDICATED EXPERIENCE PAGE: Vertical Timeline Layout */
-        <div className="relative pl-6 sm:pl-8 ml-3 sm:ml-4 border-l border-base-300/50 space-y-12 py-2">
+        /* DEDICATED EXPERIENCE PAGE: Perfectly Centered Vertical Timeline Layout */
+        <div className="border-l-2 border-base-300 space-y-12 py-2 ml-5 sm:ml-6">
           {experiences.map((exp) => (
-            <div key={exp.id} className="relative group">
-              {/* Round Company Initials Logo Node */}
-              <div className="absolute -left-[37px] sm:-left-[45px] top-0 w-9 h-9 rounded-full border border-base-300 bg-base-100 flex items-center justify-center font-mono text-[11px] font-bold text-base-content/80 shadow-xs group-hover:border-neutral transition-colors">
+            <div key={exp.id} className="relative pl-7 sm:pl-9 group">
+              {/* 36px Circular Logo Node Centered 100% Exactly Over the 2px Vertical Timeline Line */}
+              <div className="absolute -left-[19px] top-0 w-9 h-9 rounded-full border-2 border-base-300 bg-base-100 flex items-center justify-center font-mono text-[11px] font-bold text-base-content/80 shadow-xs group-hover:border-neutral transition-colors z-10">
                 {exp.initials}
               </div>
 

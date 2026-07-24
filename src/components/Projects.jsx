@@ -93,7 +93,7 @@ export default function Projects({ isPreview = false, onNavigate }) {
     },
     {
       id: 'movie-app',
-      title: 'Cross-Platform Movie App',
+      title: 'Watchbase - A Production-grade React Native Movie Database',
       subtitle: 'Mobile movie browsing app built with React Native, NativeWind, Appwrite backend, and TMDB API integration.',
       longDescription: 'A cross-platform mobile application built with React Native and NativeWind. Features TMDB API integration for browsing trending movies, Appwrite user authentication, and bookmarking favorite titles.',
       category: 'Mobile App',
@@ -135,8 +135,8 @@ export default function Projects({ isPreview = false, onNavigate }) {
       {/* Back to Home button on dedicated page */}
       {!isPreview && onNavigate && (
         <div className="mb-6">
-          <button 
-            onClick={() => onNavigate('home')} 
+          <button
+            onClick={() => onNavigate('home')}
             className="btn btn-ghost btn-xs font-mono text-xs gap-1.5 text-base-content/70 hover:text-base-content"
           >
             <ArrowLeft size={13} />
@@ -164,9 +164,8 @@ export default function Projects({ isPreview = false, onNavigate }) {
               <button
                 key={cat}
                 onClick={() => setSelectedFilter(cat)}
-                className={`tab tab-xs rounded-lg transition-all ${
-                  selectedFilter === cat ? 'tab-active font-bold shadow-xs' : 'text-base-content/70'
-                }`}
+                className={`tab tab-xs rounded-lg transition-all ${selectedFilter === cat ? 'tab-active font-bold shadow-xs' : 'text-base-content/70'
+                  }`}
               >
                 {cat}
               </button>
@@ -178,7 +177,7 @@ export default function Projects({ isPreview = false, onNavigate }) {
       {/* Projects List View (Replacing Card View) */}
       <div className="divide-y divide-base-300/40">
         {displayedProjects.map((project) => (
-          <div 
+          <div
             key={project.id}
             onClick={() => setActiveModalProject(project)}
             className="group py-5 px-3 sm:px-4 rounded-xl hover:bg-base-200/40 transition-all duration-200 cursor-pointer flex flex-col md:flex-row md:items-center justify-between gap-4"
@@ -206,8 +205,8 @@ export default function Projects({ isPreview = false, onNavigate }) {
               {/* Tech Stack Pills */}
               <div className="flex flex-wrap gap-1.5 pt-1">
                 {project.stack.map((tech, idx) => (
-                  <span 
-                    key={idx} 
+                  <span
+                    key={idx}
                     className="font-mono text-[10px] text-base-content/70 bg-base-200/80 px-2 py-0.5 rounded-md"
                   >
                     {tech}
@@ -249,9 +248,9 @@ export default function Projects({ isPreview = false, onNavigate }) {
 
       {/* Project Detail Modal */}
       {activeModalProject && (
-        <ProjectModal 
-          project={activeModalProject} 
-          onClose={() => setActiveModalProject(null)} 
+        <ProjectModal
+          project={activeModalProject}
+          onClose={() => setActiveModalProject(null)}
         />
       )}
     </section>
