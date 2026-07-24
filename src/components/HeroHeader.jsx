@@ -108,7 +108,7 @@ export default function HeroHeader() {
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 font-mono pt-4 border-t border-base-300/40">
         <div className="relative p-3 rounded-xl bg-base-200/40 border border-base-300/40 overflow-hidden group">
           <div className="absolute inset-0 bg-halftone-grid opacity-20 group-hover:opacity-40 transition-opacity" />
-          <span className="relative z-10 text-base font-extrabold text-base-content block">7+</span>
+          <span className="relative z-10 text-base font-extrabold text-base-content block">8+</span>
           <span className="relative z-10 text-[10px] text-base-content/60 uppercase tracking-widest block">Projects Built</span>
         </div>
         <div className="relative p-3 rounded-xl bg-base-200/40 border border-base-300/40 overflow-hidden group">

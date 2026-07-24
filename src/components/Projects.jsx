@@ -40,20 +40,52 @@ export default function Projects({ isPreview = false, onNavigate }) {
       featured: true
     },
     {
-      id: 'smart-egg-incubator',
-      title: 'IoT Smart Egg Incubator with Telemetry Analytics',
-      subtitle: 'Hardware-software IoT telemetry system with real-time sensor monitoring, automated climate controls, and predictive charts.',
-      longDescription: 'IoT capstone system integrating Arduino hardware sensors (DHT22 temperature, humidity, egg turning motors) with a web telemetry dashboard for live monitoring and descriptive historical analytics.',
+      id: 'beemo-iot',
+      title: 'BeeMo - IoT-Enabled Stingless Beehive Management System',
+      subtitle: 'IoT-enabled web system for real-time hive temperature, humidity, and weight monitoring with descriptive analytics.',
+      longDescription: 'An IoT-enabled web-based system designed to enhance and improve the honey production of stingless bees through continuous monitoring and regulating of parameters with Descriptive Analytics (CAPSTONE PROJECT).',
       category: 'IoT & Capstone',
-      role: 'IoT Engineer & Full Stack Dev',
+      role: 'Lead Capstone & IoT Developer',
       date: '2024 – 2025',
-      stack: ['Arduino', 'Sensors Telemetry', 'React.js', 'Node.js', 'Express', 'Chart.js', 'MySQL'],
+      stack: ['HTML', 'CSS', 'Bootstrap', 'JavaScript', 'PHP', 'Chart.js', 'Arduino'],
       highlights: [
-        'Connected hardware microcontrollers to real-time WebSockets telemetry server.',
-        'Built live interactive telemetry charts monitoring micro-climate environmental stability.',
-        'Integrated automated SMS & web alert thresholds for temperature and humidity fluctuations.'
+        'Engineered IoT hardware sensor integrations using Arduino for real-time monitoring of beehive temperature, humidity, and weight metrics.',
+        'Developed interactive descriptive analytics dashboards powered by Chart.js to optimize honey production conditions.',
+        'Built a web-based management platform in PHP, Bootstrap, and JavaScript for beehive parameter tracking and automated threshold alerts.'
       ],
       featured: true
+    },
+    {
+      id: 'contentcraft',
+      title: 'ContentCraft - Scalable MERN Blog Application',
+      subtitle: 'Full-stack MERN blog platform with user authentication (bcrypt & JWT), complete CRUD features, and AWS S3 image storage.',
+      longDescription: 'A full-stack blog application built with the MERN stack (MongoDB, Express.js, React.js, Node.js). Features user authentication (bcrypt & JWT) and complete CRUD functionality, allowing users to create, read, update, and delete blog posts. Includes AWS S3 integration for uploading and displaying blog post images.',
+      category: 'Full Stack',
+      role: 'Full Stack MERN Developer',
+      date: '2024 – 2025',
+      stack: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'AWS S3', 'Tailwind CSS', 'JWT', 'bcrypt'],
+      highlights: [
+        'Engineered complete CRUD operations allowing users to create, read, update, and delete blog posts.',
+        'Integrated AWS S3 cloud storage for high-availability uploading and serving of blog post media assets.',
+        'Implemented secure authentication and user authorization using bcrypt password hashing and JSON Web Tokens (JWT).'
+      ],
+      featured: false
+    },
+    {
+      id: 'ai-chatbot',
+      title: 'Multi-Model AI Chatbot (ChatGPT, Gemini, DeepSeek)',
+      subtitle: 'Interactive web AI-powered chatbot integrating ChatGPT, Gemini, and DeepSeek models for dynamic, intelligent conversations.',
+      longDescription: 'An interactive web AI-powered chatbot that integrates AI models (ChatGPT, Gemini, DeepSeek) to provide dynamic and intelligent conversations within a unified, responsive interface.',
+      category: 'AI & Web',
+      role: 'Frontend & AI Engineer',
+      date: '2024 – 2025',
+      stack: ['React.js', 'Tailwind CSS', 'OpenAI API', 'Google Gemini API', 'DeepSeek API', 'JavaScript'],
+      highlights: [
+        'Integrated multiple AI model provider APIs (ChatGPT, Gemini, DeepSeek) into a unified dynamic conversation engine.',
+        'Engineered real-time chat response handling with dynamic prompt controls and model switching.',
+        'Styled custom dark/light UI themes and fluid chat component micro-interactions using Tailwind CSS.'
+      ],
+      featured: false
     },
     {
       id: 'appliloan',
@@ -104,22 +136,6 @@ export default function Projects({ isPreview = false, onNavigate }) {
       ],
       featured: false
     },
-    {
-      id: 'ai-code-harness',
-      title: 'AI Agent Developer Harness & Custom Prompts Integration',
-      subtitle: 'Custom developer workflow automation harness connecting LLM APIs (Gemini, DeepSeek, ChatGPT) with IDE extension flows.',
-      longDescription: 'Experimental AI developer tooling harness designed to streamline codebase refactoring, automated documentation generation, and unit test suite creation using modern AI model APIs.',
-      category: 'AI & Web',
-      role: 'AI / Vibe Engineer',
-      date: '2025 – 2026',
-      stack: ['Node.js', 'Gemini API', 'DeepSeek API', 'ChatGPT API', 'TypeScript'],
-      highlights: [
-        'Built prompt engineering harnesses for code analysis, linting, and automated refactoring.',
-        'Integrated multi-provider LLM failover routing across Gemini, DeepSeek, and OpenAI endpoints.',
-        'Designed lightweight JSON response parsers for reliable developer output generation.'
-      ],
-      featured: true
-    }
   ];
 
   const categories = ['All', 'IoT & Capstone', 'Full Stack', 'Commissions', 'AI & Web', 'Mobile App', 'Front-End'];
@@ -273,7 +289,6 @@ export default function Projects({ isPreview = false, onNavigate }) {
             <div className="flex flex-wrap gap-1.5 pt-1 font-mono text-[10px] text-base-content/70">
               <span className="bg-base-100 px-2 py-0.5 rounded border border-base-300/60 font-semibold">MODULAR ARCHITECTURE</span>
               <span className="bg-base-100 px-2 py-0.5 rounded border border-base-300/60 font-semibold">AI & AGENT SKILLS</span>
-              <span className="bg-base-100 px-2 py-0.5 rounded border border-base-300/60 font-semibold">REAL-TIME TELEMETRY</span>
               <span className="bg-base-100 px-2 py-0.5 rounded border border-base-300/60 font-semibold">STATE CACHING</span>
               <span className="bg-base-100 px-2 py-0.5 rounded border border-base-300/60 font-semibold">REST & WEBSOCKET APIS</span>
             </div>

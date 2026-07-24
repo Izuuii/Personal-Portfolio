@@ -19,7 +19,7 @@ export default function Sidebar({ currentPage, setCurrentPage }) {
 
   const navItems = [
     { id: 'home', label: 'Home', icon: HomeIcon, badge: 'Overview' },
-    { id: 'projects', label: 'Projects', icon: FolderGit2, badge: '4' },
+    { id: 'projects', label: 'Projects', icon: FolderGit2, badge: '8' },
     { id: 'experience', label: 'Experience', icon: Briefcase, badge: '3 roles' },
     { id: 'stack', label: 'Stack', icon: Layers, badge: 'Skills' },
     { id: 'certifications', label: 'Certifications', icon: Award, badge: 'New' },
