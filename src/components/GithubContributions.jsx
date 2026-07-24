@@ -23,17 +23,17 @@ export default function GithubContributions({ username = "Izuuii" }) {
     const generatedDays = [];
     const yearNum = parseInt(selectedYear, 10);
     const activeMonths = yearlyStats[selectedYear].activeMonths;
-    
+
     // Seed 365 days for the selected year
     const startDate = new Date(yearNum, 0, 1);
-    
+
     for (let i = 0; i < 365; i++) {
       const date = new Date(startDate);
       date.setDate(date.getDate() + i);
       const month = date.getMonth();
       const dayOfWeek = date.getDay();
       const isWeekend = dayOfWeek === 0 || dayOfWeek === 6;
-      
+
       let count = 0;
       let intensity = 0;
 
@@ -71,7 +71,7 @@ export default function GithubContributions({ username = "Izuuii" }) {
   const renderDot = (day, rowIndex) => {
     if (!day) return null;
     const count = day.count || 0;
-    
+
     // Top row (rowIndex === 0) uses tooltip-bottom to prevent top container clipping
     const tooltipPos = rowIndex === 0 ? 'tooltip-bottom' : 'tooltip-top';
 
@@ -83,8 +83,8 @@ export default function GithubContributions({ username = "Izuuii" }) {
     else if (day.intensity === 4) dotStyle = 'bg-base-content w-3.5 h-3.5 shadow-xs';
 
     return (
-      <div 
-        key={day.date} 
+      <div
+        key={day.date}
         className={`w-3.5 h-3.5 flex items-center justify-center tooltip ${tooltipPos} font-mono text-[10px]`}
         data-tip={`${count} contribution${count === 1 ? '' : 's'} on ${day.date}`}
       >
@@ -119,9 +119,9 @@ export default function GithubContributions({ username = "Izuuii" }) {
             ))}
           </div>
 
-          <a 
-            href={`https://github.com/${username}`} 
-            target="_blank" 
+          <a
+            href={`https://github.com/${username}`}
+            target="_blank"
             rel="noreferrer"
             className="text-xs font-mono text-base-content/70 hover:text-base-content flex items-center gap-1 uppercase tracking-wider group transition-colors"
           >

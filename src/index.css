@@ -22,25 +22,20 @@
   transition-duration: 250ms;
 }
 
-/* Halftone Dot Pattern Background Motif */
-.bg-halftone-dots {
-  background-image: radial-gradient(rgba(0, 0, 0, 0.18) 1px, transparent 1px);
-  background-size: 10px 10px;
-}
-
-[data-theme="dark"] .bg-halftone-dots {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px);
+/* Halftone Dot Pattern Background Motifs (Refined for Bryl Lim dot accents) */
+.bg-halftone-grid {
+  background-image: radial-gradient(var(--color-base-content) 1.1px, transparent 1.1px);
   background-size: 10px 10px;
 }
 
 .bg-halftone-dense {
-  background-image: radial-gradient(rgba(0, 0, 0, 0.22) 1.2px, transparent 1.2px);
-  background-size: 6px 6px;
+  background-image: radial-gradient(var(--color-base-content) 1.2px, transparent 1.2px);
+  background-size: 7px 7px;
 }
 
-[data-theme="dark"] .bg-halftone-dense {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.18) 1.2px, transparent 1.2px);
-  background-size: 6px 6px;
+.bg-halftone-dots {
+  background-image: radial-gradient(var(--color-base-content) 1px, transparent 1px);
+  background-size: 12px 12px;
 }
 
 /* Hairline borders */
@@ -60,8 +55,8 @@
 }
 
 .mask-bottom-fade {
-  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }
 
 /* Custom minimal scrollbar */

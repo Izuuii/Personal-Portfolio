@@ -180,8 +180,10 @@ export default function Projects({ isPreview = false, onNavigate }) {
           <div
             key={project.id}
             onClick={() => setActiveModalProject(project)}
-            className="group py-5 px-3 sm:px-4 rounded-xl hover:bg-base-200/40 transition-all duration-200 cursor-pointer flex flex-col md:flex-row md:items-center justify-between gap-4"
+            className="relative group py-5 px-3 sm:px-4 rounded-xl hover:bg-base-200/40 transition-all duration-200 cursor-pointer flex flex-col md:flex-row md:items-center justify-between gap-4 overflow-hidden"
           >
+            {/* Subtle halftone dot matrix accent on hover (Matching Bryl Lim reference Image 2) */}
+            <div className="absolute inset-0 bg-halftone-grid opacity-0 group-hover:opacity-25 transition-opacity pointer-events-none rounded-xl mask-radial-fade" />
             {/* Left Details Column */}
             <div className="space-y-2 flex-1 min-w-0">
               <div className="flex flex-wrap items-center gap-2">
