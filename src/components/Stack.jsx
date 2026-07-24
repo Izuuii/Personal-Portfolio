@@ -22,6 +22,7 @@ export default function Stack({ isPreview = false, onNavigate }) {
     'Chart.js',
     'Arduino',
     'TanStack Query',
+    'AI Agent Skills',
     'Axios'
   ];
 
@@ -80,12 +81,14 @@ export default function Stack({ isPreview = false, onNavigate }) {
       ]
     },
     {
-      category: 'AI & INTEGRATIONS',
+      category: 'AI & AGENTIC DEV',
       skills: [
-        'ChatGPT API',
-        'Gemini API',
-        'DeepSeek API',
-        'Prompt Engineering'
+        'Modular Agent Skills (.agents/skills)',
+        'LLM Pair Programming (Claude / DeepSeek / Gemini)',
+        'AI Coding Agents & Automation',
+        'Prompt Engineering & Harnesses',
+        'ChatGPT / Gemini / DeepSeek APIs',
+        'AI Function Calling & Structured Outputs'
       ]
     },
     {

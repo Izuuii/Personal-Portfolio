@@ -268,10 +268,11 @@ export default function Projects({ isPreview = false, onNavigate }) {
               HOW I ENGINEER & BUILD SYSTEMS
             </h3>
             <p className="text-xs text-base-content/80 leading-relaxed font-sans">
-              I approach software engineering with a product-first mindset: decomposing complex real-world requirements into modular frontend architectures, resilient backend engines, and fluid interactive user flows. Whether building enterprise ride-hailing telemetries, automating school reporting engines, or crafting cross-platform mobile apps, every system is built for speed, clean state management, and high visual polish.
+              I approach software engineering with a product-first mindset: decomposing complex real-world requirements into modular frontend architectures, resilient backend engines, and fluid interactive user flows. By combining human-in-the-loop Vibe Engineering with <span className="font-semibold text-base-content">AI coding agents, custom agent skills, and LLM pair programming</span>, I accelerate developer iteration while ensuring high architectural craft, robust state management, and pixel-perfect polish across every project.
             </p>
             <div className="flex flex-wrap gap-1.5 pt-1 font-mono text-[10px] text-base-content/70">
               <span className="bg-base-100 px-2 py-0.5 rounded border border-base-300/60 font-semibold">MODULAR ARCHITECTURE</span>
+              <span className="bg-base-100 px-2 py-0.5 rounded border border-base-300/60 font-semibold">AI & AGENT SKILLS</span>
               <span className="bg-base-100 px-2 py-0.5 rounded border border-base-300/60 font-semibold">REAL-TIME TELEMETRY</span>
               <span className="bg-base-100 px-2 py-0.5 rounded border border-base-300/60 font-semibold">STATE CACHING</span>
               <span className="bg-base-100 px-2 py-0.5 rounded border border-base-300/60 font-semibold">REST & WEBSOCKET APIS</span>

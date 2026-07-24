@@ -68,7 +68,7 @@ export default function HeroHeader() {
 
           {/* Engaging Narrative Bio */}
           <p className="text-xs md:text-sm text-base-content/80 leading-relaxed font-sans max-w-2xl">
-            Passionate <span className="font-semibold text-base-content">Vibe Engineer, Frontend & Full-Stack Developer</span> dedicated to crafting high-aesthetic, fluid web applications with seamless user flows, responsive micro-interactions, and robust backend architectures. Driven by code aesthetics and interactive polish, I transform complex system requirements into clean, modern digital experiences that feel effortless and wows at first glance.
+            Passionate <span className="font-semibold text-base-content">Vibe Engineer, Frontend & Full-Stack Developer</span> dedicated to crafting high-aesthetic, fluid web applications with seamless user flows, responsive micro-interactions, and robust backend architectures. Driven by code aesthetics and interactive polish, I transform complex system requirements into clean, modern digital experiences that feel effortless and wow at first glance.
           </p>
 
           {/* Quick Contact & Resource Links Bar */}
