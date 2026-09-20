@@ -4,6 +4,25 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 export default function Experience({ isPreview = false, onNavigate }) {
   const experiences = [
     {
+      id: 'kmc-solutions',
+      year: '2025 – PRESENT',
+      initials: 'KMC',
+      company: 'KMC - Solutions',
+      employmentType: 'Full-time · Remote',
+      location: 'Philippines · Remote',
+      role: 'Jr. Full Stack Developer',
+      dateRange: 'DEC 2025 – PRESENT',
+      duration: 'CURRENT',
+      description: [
+        'Engineered AI chatbots for a central data-intelligence engine and client-facing pharmaceutical SaaS platform, implementing WebSocket answer streaming with dropped-connection recovery, multi-turn conversation persistence, and inline citation parsing with markdown theming.',
+        'Drove V1 to V2 infrastructure migration for competitive intelligence SaaS, resolving monorepo drift, rewiring authentication/permissions to the V2 API, and building foundational read adapters consumed across all subsequent domain migrations.',
+        'Developed Knowledge Graph UI from scratch to visualize complex pharmaceutical data relationships, engineering canvas rendering, dynamic layout panels, schema tabs, and interactive node-detail views.',
+        'Owned end-to-end development of internal admin console managing data-collection infrastructure, building comprehensive dashboards (Collector Health, Scope Manager) with live filtering, pagination, bulk selection, and fleet-wide operational summaries.',
+        'Built an AI Interviewer frontend from scratch and delivered early-stage feature development for multiple enterprise-level client applications.'
+      ],
+      skills: ['React.js', 'TypeScript', 'WebSockets', 'AI Chatbots / Streaming', 'Knowledge Graph Canvas', 'V2 Migration', 'Admin Consoles', 'Tailwind CSS']
+    },
+    {
       id: 'mk-trading',
       year: '2025',
       initials: 'MK',
@@ -11,8 +30,8 @@ export default function Experience({ isPreview = false, onNavigate }) {
       employmentType: 'Full-time · Junior Role',
       location: 'Quezon, Philippines · On-site',
       role: 'Junior Full Stack Developer',
-      dateRange: 'JUL 2025 – DEC 2025',
-      duration: '6 MOS',
+      dateRange: 'JUL 2025 – OCT 2025',
+      duration: '4 MOS',
       description: [
         'Contributed to full-stack engineering and UI/UX design for Indigo App (Ride-Hailing Mobile & Web Application) using React Native, Express.js, Node.js, and PostgreSQL.',
         'Engineered real-time rider dispatch telemetry, user management across Rider, Customer apps, and Web Admin portal using WebSockets and TanStack Query state caching.',
@@ -21,21 +40,22 @@ export default function Experience({ isPreview = false, onNavigate }) {
       skills: ['React Native', 'React.js', 'Express.js', 'Node.js', 'PostgreSQL', 'Firebase', 'WebSockets', 'TanStack Query']
     },
     {
-      id: 'freelance-lead',
+      id: 'legacy-globalsa',
       year: '2025',
-      initials: 'FC',
-      company: 'Freelance Commissions',
-      employmentType: 'Freelance · Team Leader',
-      location: 'Quezon, Philippines · Remote / Hybrid',
-      role: 'Full Stack Developer & Team Lead',
-      dateRange: 'JUL 2025 – PRESENT',
-      duration: 'CURRENT',
+      initials: 'LG',
+      company: 'Legacy Global S.A. / Independent Engagements',
+      employmentType: 'Contract · Lead Full Stack Architect',
+      location: 'Panama / International · Remote',
+      role: 'Lead Full Stack Architect & Team Lead',
+      dateRange: 'JUL 2025 – OCT 2025',
+      duration: '4 MOS',
       description: [
-        'AcadFlow: Developed a centralized web-based portal digitizing DepEd School Forms (SF 1–SF 10) for Castañas National High School, automating reporting & certificate generation with secure role-based access.',
-        'AppliLoan: Designed & developed a web-based information system incorporating descriptive analytics capabilities for Sariaya Multi-Purpose Cooperative to gain operational loan insights.',
-        'Architected React.js frontend structures, Zustand state flows, and Laravel MySQL RESTful API integrations.'
+        'Architected LegacyGlobal: a multi-tenant international trade & commodity procurement portal with 3-tier role-based access control (Admin, Client, TriParty), integrating automated KYC document verification, proposal builders, and contract lifecycle workflows.',
+        'Led full-stack engineering of LegaShop & LGGM multi-vendor marketplaces, bridging Python/Django REST API backend services with responsive React TypeScript interfaces for store management and catalog fulfillment.',
+        'Engineered interactive 3D visualizations and real-time event telemetry utilizing Three.js, OGL, GSAP, Socket.io, and Recharts operational dashboards.',
+        'Delivered high-impact client systems including AcadFlow (DepEd reporting automation) and AppliLoan (financial analytics dashboard with Supabase RLS security).'
       ],
-      skills: ['React.js', 'Tailwind CSS', 'DaisyUI', 'Laravel', 'MySQL', 'Zustand', 'REST APIs']
+      skills: ['TypeScript', 'React.js', 'Python (Django)', 'Three.js / OGL', 'GSAP', 'Socket.io', 'Supabase (RLS)', 'Radix UI', 'TanStack Query', 'Tailwind CSS']
     },
     {
       id: 'supsoft-tech',
@@ -43,12 +63,13 @@ export default function Experience({ isPreview = false, onNavigate }) {
       initials: 'ST',
       company: 'Supsoft Tech',
       employmentType: 'Internship (OJT) · UI/UX Team Lead',
-      location: 'Quezon, Philippines · Hybrid',
+      location: 'Quezon, Philippines · Remote',
       role: 'Web Developer Intern & UI/UX Lead',
       dateRange: 'MAR 2025 – JUN 2025',
       duration: '4 MOS',
       description: [
-        'Contributed to CertiCode platform & Attendance module, integrating Laravel backend APIs with React frontend using Axios for real-time verification.',
+        'Received internal training in ReactJS and foundational lessons in Laravel under the guidance of the Team Lead.',
+        'Integrated Laravel backend APIs with the React frontend using Axios for real-time verification in CertiCode certification platform.',
         'Designed & implemented the "Seminar History" table in user profiles and led a team of OJT interns in UI/UX redesign initiatives.',
         'Participated in Git/GitHub version control workflows and frontend responsiveness optimizations.'
       ],

@@ -7,9 +7,11 @@ import {
   Award, 
   Mail, 
   Phone, 
-  Menu,
-  X,
-  ExternalLink
+  Menu, 
+  X, 
+  ExternalLink,
+  FileDown,
+  Download
 } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './Icons';
 import ThemeController from './ThemeController';
@@ -19,8 +21,8 @@ export default function Sidebar({ currentPage, setCurrentPage }) {
 
   const navItems = [
     { id: 'home', label: 'Home', icon: HomeIcon, badge: 'Overview' },
-    { id: 'projects', label: 'Projects', icon: FolderGit2, badge: '8' },
-    { id: 'experience', label: 'Experience', icon: Briefcase, badge: '3 roles' },
+    { id: 'projects', label: 'Projects', icon: FolderGit2, badge: '13' },
+    { id: 'experience', label: 'Experience', icon: Briefcase, badge: '4 roles' },
     { id: 'stack', label: 'Stack', icon: Layers, badge: 'Skills' },
     { id: 'certifications', label: 'Certifications', icon: Award, badge: 'New' },
   ];
@@ -46,7 +48,7 @@ export default function Sidebar({ currentPage, setCurrentPage }) {
           </div>
           <div>
             <h1 className="font-semibold text-sm tracking-tight">Dan Denver De Leon</h1>
-            <p className="text-[10px] font-mono text-base-content/60 uppercase tracking-wider">Vibe Engineer</p>
+            <p className="text-[10px] font-mono text-base-content/60 uppercase tracking-wider">Full Stack & AI Engineer</p>
           </div>
         </div>
         <div className="flex items-center gap-2">
@@ -103,7 +105,7 @@ export default function Sidebar({ currentPage, setCurrentPage }) {
                 Dan Denver
               </h2>
               <p className="text-[9px] font-mono text-base-content/60 uppercase tracking-widest truncate">
-                Vibe Engineer / Full Stack
+                Full Stack & AI Engineer
               </p>
             </div>
           </div>
@@ -148,15 +150,26 @@ export default function Sidebar({ currentPage, setCurrentPage }) {
           {/* Quick Contact Info */}
           <div className="space-y-1.5 text-[11px] font-mono">
             <a 
+              href="/DAN%20DENVER%20DE%20LEON%20(6).pdf" 
+              download="DAN_DENVER_DE_LEON_RESUME.pdf"
+              target="_blank" 
+              rel="noreferrer" 
+              className="flex items-center gap-2 text-base-content hover:text-base-content transition-colors font-medium bg-base-200/50 hover:bg-base-200 px-2 py-1.5 rounded-lg border border-base-300/40 shadow-2xs"
+            >
+              <FileDown size={13} className="shrink-0 text-emerald-500" />
+              <span>Resume (PDF)</span>
+              <Download size={11} className="ml-auto opacity-60" />
+            </a>
+            <a 
               href="mailto:denverdeleon21@gmail.com" 
-              className="flex items-center gap-2 text-base-content/70 hover:text-base-content transition-colors truncate"
+              className="flex items-center gap-2 text-base-content/70 hover:text-base-content transition-colors truncate px-1 py-0.5"
             >
               <Mail size={12} className="shrink-0" />
               <span className="truncate">denverdeleon21@gmail.com</span>
             </a>
             <a 
               href="tel:+639982323125" 
-              className="flex items-center gap-2 text-base-content/70 hover:text-base-content transition-colors truncate"
+              className="flex items-center gap-2 text-base-content/70 hover:text-base-content transition-colors truncate px-1 py-0.5"
             >
               <Phone size={12} className="shrink-0" />
               <span>+63 998 232 3125</span>
@@ -164,8 +177,8 @@ export default function Sidebar({ currentPage, setCurrentPage }) {
             <a 
               href="https://github.com/Izuuii" 
               target="_blank" 
-              rel="noreferrer"
-              className="flex items-center gap-2 text-base-content/70 hover:text-base-content transition-colors"
+              rel="noreferrer" 
+              className="flex items-center gap-2 text-base-content/70 hover:text-base-content transition-colors px-1 py-0.5"
             >
               <GithubIcon size={12} className="shrink-0" />
               <span>github.com/Izuuii</span>
@@ -174,8 +187,8 @@ export default function Sidebar({ currentPage, setCurrentPage }) {
             <a 
               href="https://www.linkedin.com/in/dan-denver-de-leon-1887ab272/" 
               target="_blank" 
-              rel="noreferrer"
-              className="flex items-center gap-2 text-base-content/70 hover:text-base-content transition-colors"
+              rel="noreferrer" 
+              className="flex items-center gap-2 text-base-content/70 hover:text-base-content transition-colors px-1 py-0.5"
             >
               <LinkedinIcon size={12} className="shrink-0" />
               <span>LinkedIn Profile</span>

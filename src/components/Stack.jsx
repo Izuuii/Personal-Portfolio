@@ -3,72 +3,95 @@ import { ArrowLeft } from 'lucide-react';
 
 export default function Stack({ isPreview = false, onNavigate }) {
   const previewPills = [
-    'JavaScript',
-    'React',
-    'React Native',
+    'Next.js 15',
+    'React 19',
+    'TypeScript',
+    'Three.js',
+    'Python',
+    'FastAPI',
+    'Django',
+    'Supabase',
+    'pgvector',
+    'GSAP',
     'Node.js',
     'Express',
     'Laravel',
-    'PHP',
-    'MySQL',
-    'MongoDB',
     'PostgreSQL',
+    'MongoDB',
     'Tailwind CSS',
     'DaisyUI',
+    'Radix UI',
+    'Zod',
+    'Vercel AI SDK',
     'Zustand',
-    'AWS S3',
-    'Firebase',
     'WebSockets',
-    'Chart.js',
+    'AWS S3',
     'Arduino',
-    'TanStack Query',
-    'AI Agent Skills',
-    'Axios'
+    'TanStack Query'
   ];
 
   const fullStackCategories = [
     {
       category: 'FRONTEND',
       skills: [
-        'JavaScript (ES6+)',
         'TypeScript',
-        'React.js',
+        'JavaScript (ES6+)',
+        'Next.js 15 (App Router)',
+        'React.js 19',
         'React Native',
-        'Tailwind CSS',
+        'Three.js / OGL (WebGL)',
+        'Tailwind CSS v4',
         'DaisyUI',
+        'GSAP / @gsap/react',
+        'Radix UI / shadcn',
         'Zustand',
-        'HTML5',
-        'CSS3',
-        'Bootstrap',
-        'Vite'
+        'HTML5 & CSS3',
+        'Vite / Turbopack'
       ]
     },
     {
-      category: 'BACKEND',
+      category: 'BACKEND & APIS',
       skills: [
+        'Python 3.12',
+        'FastAPI',
+        'Django / DRF',
         'Node.js',
         'Express.js',
         'Laravel',
         'PHP',
-        'MySQL',
-        'MongoDB',
-        'PostgreSQL',
-        'REST APIs',
-        'WebSockets',
+        'SQLAlchemy / aiosqlite',
+        'RESTful APIs',
+        'WebSockets / Socket.io',
         'JWT Auth',
-        'Axios',
+        'Zod Schema Validation',
         'TanStack Query'
       ]
     },
     {
-      category: 'DEVOPS & CLOUD',
+      category: 'DATABASES & CLOUD',
       skills: [
+        'Supabase PostgreSQL',
+        'pgvector (Vector Search)',
+        'MySQL',
+        'MongoDB',
         'AWS S3',
         'Firebase',
+        'Clerk Auth',
+        'ImageKit.io',
         'Vercel',
-        'Git',
-        'GitHub',
-        'Postman'
+        'Git & GitHub'
+      ]
+    },
+    {
+      category: 'AI & SYSTEMS',
+      skills: [
+        'Vercel AI SDK',
+        'Vector Embeddings (1536-dim)',
+        'OpenAI GPT-4o / Gemini APIs',
+        'Oxylabs & Cheerio Web Scraping',
+        'AI Coding Agents & Automation',
+        'Modular Agent Skills (.agents/skills)',
+        'Prompt Engineering & Harnesses'
       ]
     },
     {
@@ -81,24 +104,13 @@ export default function Stack({ isPreview = false, onNavigate }) {
       ]
     },
     {
-      category: 'AI & AGENTIC DEV',
-      skills: [
-        'Modular Agent Skills (.agents/skills)',
-        'LLM Pair Programming (Claude / DeepSeek / Gemini)',
-        'AI Coding Agents & Automation',
-        'Prompt Engineering & Harnesses',
-        'ChatGPT / Gemini / DeepSeek APIs',
-        'AI Function Calling & Structured Outputs'
-      ]
-    },
-    {
       category: 'TOOLS & UTILITIES',
       skills: [
-        'Figma',
-        'VS Code',
-        'Cursor',
+        'Figma UI/UX',
+        'Cursor / VS Code',
+        'Postman',
+        'uv (Python Package Manager)',
         'Responsive Design',
-        'UI/UX Architecture',
         'Agile Methodology'
       ]
     }

@@ -1,5 +1,6 @@
 import React from 'react';
-import { X, Layers, Calendar, UserCheck, CheckCircle, ExternalLink, Code2 } from 'lucide-react';
+import { X, Layers, Calendar, UserCheck, CheckCircle, ExternalLink, Code2, Lock } from 'lucide-react';
+import { GithubIcon } from './Icons';
 
 export default function ProjectModal({ project, onClose }) {
   if (!project) return null;
@@ -9,7 +10,7 @@ export default function ProjectModal({ project, onClose }) {
       <div className="modal-box max-w-2xl bg-base-100 border border-base-300 shadow-2xl p-6 relative rounded-2xl">
         {/* Close Button */}
         <button 
-          onClick={onClose}
+          onClick={onClose} 
           className="btn btn-sm btn-circle btn-ghost absolute right-4 top-4 text-base-content/60 hover:text-base-content"
           aria-label="Close modal"
         >
@@ -25,6 +26,12 @@ export default function ProjectModal({ project, onClose }) {
             <span className="badge badge-outline font-mono text-[10px] uppercase tracking-wider">
               {project.role}
             </span>
+            {project.isPrivate && (
+              <span className="badge badge-ghost font-mono text-[10px] uppercase tracking-wider flex items-center gap-1 text-base-content/60">
+                <Lock size={10} />
+                Private
+              </span>
+            )}
           </div>
           <h3 className="text-xl font-bold tracking-tight text-base-content">
             {project.title}
@@ -82,22 +89,45 @@ export default function ProjectModal({ project, onClose }) {
         </div>
 
         {/* Modal Action Footer */}
-        <div className="modal-action mt-6 pt-4 border-t border-base-200">
-          <button 
-            onClick={onClose} 
-            className="btn btn-sm btn-ghost font-mono text-xs"
-          >
-            Close
-          </button>
-          <a 
-            href="https://github.com" 
-            target="_blank" 
-            rel="noreferrer" 
-            className="btn btn-sm btn-neutral font-mono text-xs gap-1.5"
-          >
-            View Repository
-            <ExternalLink size={12} />
-          </a>
+        <div className="modal-action mt-6 pt-4 border-t border-base-200 flex items-center justify-between">
+          <div className="text-[11px] font-mono text-base-content/50">
+            {project.isPrivate && !project.githubUrl ? (
+              <span className="flex items-center gap-1.5 text-base-content/60">
+                <Lock size={12} />
+                Client / Proprietary Codebase
+              </span>
+            ) : (
+              <span>Verified on GitHub</span>
+            )}
+          </div>
+          <div className="flex items-center gap-2">
+            <button 
+              onClick={onClose} 
+              className="btn btn-sm btn-ghost font-mono text-xs"
+            >
+              Close
+            </button>
+            {project.githubUrl ? (
+              <a 
+                href={project.githubUrl} 
+                target="_blank" 
+                rel="noreferrer" 
+                className="btn btn-sm btn-neutral font-mono text-xs gap-1.5"
+              >
+                <GithubIcon size={12} />
+                View Repository
+                <ExternalLink size={12} />
+              </a>
+            ) : (
+              <button 
+                disabled 
+                className="btn btn-sm btn-disabled font-mono text-xs gap-1.5 opacity-60"
+              >
+                <Lock size={12} />
+                Private Codebase
+              </button>
+            )}
+          </div>
         </div>
       </div>
 

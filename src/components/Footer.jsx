@@ -30,7 +30,7 @@ export default function Footer() {
             Ready to collaborate or hire?
           </h3>
           <p className="text-xs sm:text-sm text-neutral-content/80 font-sans leading-relaxed">
-            I'm currently available for Full Stack and Front-End developer opportunities, freelance projects, and technical initiatives.
+            I'm currently available for Full Stack, Front-End, and AI engineering opportunities, freelance projects, and technical initiatives.
           </p>
         </div>
 
@@ -56,7 +56,7 @@ export default function Footer() {
       <div className="flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-base-content/60">
         <div>
           <p className="font-semibold text-base-content text-sm tracking-tight">Dan Denver De Leon</p>
-          <p className="text-[11px] text-base-content/50">Full Stack & Front-End Web Developer • Philippines</p>
+          <p className="text-[11px] text-base-content/50">Front-End / Full Stack & AI Engineer • Philippines</p>
         </div>
 
         <div className="flex flex-wrap items-center gap-4 text-[11px]">

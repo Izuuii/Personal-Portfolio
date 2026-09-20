@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, ArrowUpRight, Code2, Check } from 'lucide-react';
+import { Mail, ArrowUpRight, Code2, Check, FileDown, Download } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './Icons';
 
 export default function HeroHeader() {
@@ -45,10 +45,10 @@ export default function HeroHeader() {
           {/* Top Pill Badges */}
           <div className="flex flex-wrap items-center gap-2 text-xs font-mono">
             <span className="badge badge-neutral font-mono text-[10px] tracking-wider uppercase">
-              Vibe Engineering
+              Full Stack & AI Engineer
             </span>
             <span className="badge badge-outline font-mono text-[10px] tracking-wider uppercase">
-              Frontend & Full Stack
+              Front-End Architecture
             </span>
             <span className="badge badge-ghost font-mono text-[10px] text-base-content/70">
               Available for Opportunities
@@ -62,22 +62,33 @@ export default function HeroHeader() {
             </h1>
             <p className="text-sm md:text-base font-mono font-medium text-base-content/70 mt-1 flex items-center gap-2">
               <Code2 size={16} className="text-neutral-content/80" />
-              VIBE ENGINEER / FRONTEND / FULL STACK
+              FRONT-END / FULL STACK & AI ENGINEER
             </p>
           </div>
 
           {/* Engaging Narrative Bio */}
           <p className="text-xs md:text-sm text-base-content/80 leading-relaxed font-sans max-w-2xl">
-            Passionate <span className="font-semibold text-base-content">Vibe Engineer, Frontend & Full-Stack Developer</span> dedicated to crafting high-aesthetic, fluid web applications with seamless user flows, responsive micro-interactions, and robust backend architectures. Driven by code aesthetics and interactive polish, I transform complex system requirements into clean, modern digital experiences that feel effortless and wow at first glance.
+            Passionate <span className="font-semibold text-base-content">Front-End, Full-Stack & AI Engineer</span> dedicated to crafting high-aesthetic, fluid web applications with seamless user flows, responsive micro-interactions, and robust backend architectures. Driven by code aesthetics and interactive polish, I transform complex system requirements into clean, modern digital experiences that feel effortless and wow at first glance.
           </p>
 
           {/* Quick Contact & Resource Links Bar */}
           <div className="flex flex-wrap items-center gap-2 pt-2 text-xs font-mono">
             <a
+              href="/DAN%20DENVER%20DE%20LEON%20(6).pdf"
+              download="DAN_DENVER_DE_LEON_RESUME.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="btn btn-neutral btn-xs gap-1.5 font-mono text-[11px] tracking-wider shadow-xs"
+            >
+              <FileDown size={12} />
+              Resume (CV)
+              <Download size={10} />
+            </a>
+            <a
               href="https://www.linkedin.com/in/dan-denver-de-leon-1887ab272/"
               target="_blank"
               rel="noreferrer"
-              className="btn btn-neutral btn-xs gap-1.5 tracking-wider font-mono text-[11px]"
+              className="btn btn-outline btn-xs gap-1.5 tracking-wider font-mono text-[11px]"
             >
               <LinkedinIcon size={12} />
               LinkedIn
@@ -108,12 +119,12 @@ export default function HeroHeader() {
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 font-mono pt-4 border-t border-base-300/40">
         <div className="relative p-3 rounded-xl bg-base-200/40 border border-base-300/40 overflow-hidden group">
           <div className="absolute inset-0 bg-halftone-grid opacity-20 group-hover:opacity-40 transition-opacity" />
-          <span className="relative z-10 text-base font-extrabold text-base-content block">8+</span>
+          <span className="relative z-10 text-base font-extrabold text-base-content block">13+</span>
           <span className="relative z-10 text-[10px] text-base-content/60 uppercase tracking-widest block">Projects Built</span>
         </div>
         <div className="relative p-3 rounded-xl bg-base-200/40 border border-base-300/40 overflow-hidden group">
           <div className="absolute inset-0 bg-halftone-grid opacity-20 group-hover:opacity-40 transition-opacity" />
-          <span className="relative z-10 text-base font-extrabold text-base-content block">3+</span>
+          <span className="relative z-10 text-base font-extrabold text-base-content block">4+</span>
           <span className="relative z-10 text-[10px] text-base-content/60 uppercase tracking-widest block">Work Roles</span>
         </div>
         <div className="relative p-3 rounded-xl bg-base-200/40 border border-base-300/40 overflow-hidden group">

@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Monitor, Sun, Moon, Volume2, VolumeX } from 'lucide-react';
+import { Monitor, Sun, Moon } from 'lucide-react';
 
 export default function ThemeController({ compact = false }) {
   const [themeMode, setThemeMode] = useState('system'); // 'system' | 'light' | 'dark'
-  const [isMuted, setIsMuted] = useState(true);
 
   // Apply theme to document element synchronously
   const applyTheme = (mode) => {
@@ -39,7 +38,7 @@ export default function ThemeController({ compact = false }) {
   };
 
   return (
-    <div className="inline-flex items-center gap-1.5 font-mono">
+    <div className="inline-flex items-center font-mono">
       {/* Mini Capsule Pill for System (Monitor), Light (Sun), Dark (Moon) */}
       <div className="inline-flex items-center p-0.5 rounded-full bg-base-200/80 border border-base-300/60 backdrop-blur-md shadow-2xs">
         {/* System Theme Icon */}
@@ -87,17 +86,6 @@ export default function ThemeController({ compact = false }) {
           <Moon size={12} />
         </button>
       </div>
-
-      {/* Mini Circular Sound Mute Button */}
-      <button
-        type="button"
-        onClick={() => setIsMuted(!isMuted)}
-        className="w-7 h-7 rounded-full bg-base-200/80 border border-base-300/60 backdrop-blur-md flex items-center justify-center text-base-content/50 hover:text-base-content transition-all duration-200 shadow-2xs active:scale-95"
-        title={isMuted ? "Unmute Audio" : "Mute Audio"}
-        aria-label="Toggle Sound"
-      >
-        {isMuted ? <VolumeX size={12} /> : <Volume2 size={12} />}
-      </button>
     </div>
   );
 }

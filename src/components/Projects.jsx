@@ -8,6 +8,23 @@ export default function Projects({ isPreview = false, onNavigate }) {
 
   const projects = [
     {
+      id: 'skew-ai',
+      title: 'SKEW - AI News Bias Analysis & Semantic Vector Search Engine',
+      subtitle: 'Automated news ingestion & bias detection platform with 1536-dim vector embeddings, Supabase pgvector cosine search, and Next.js App Router.',
+      longDescription: 'An automated news intelligence ecosystem that scrapes breaking articles via Oxylabs, parses DOM with Cheerio, performs multi-dimensional bias framing and sentiment analysis with OpenAI GPT-4o-mini & Vercel AI SDK, and indexes articles with 1536-dimensional vector embeddings into Supabase PostgreSQL for sub-second semantic similarity search.',
+      category: 'AI & Systems',
+      role: 'AI & Full Stack Engineer',
+      date: '2026',
+      stack: ['Next.js', 'TypeScript', 'Supabase', 'pgvector', 'Vercel AI SDK', 'OpenAI API', 'Cheerio', 'Oxylabs', 'Clerk'],
+      highlights: [
+        'Engineered automated hourly scraping pipeline with Cheerio and Oxylabs scheduler.',
+        'Integrated Supabase pgvector with custom RPC cosine distance function for instant semantic article matching.',
+        'Built structured LLM political framing and sentiment extraction engine with Zod schema validation.'
+      ],
+      featured: true,
+      githubUrl: 'https://github.com/Izuuii/SKEW'
+    },
+    {
       id: 'indigo-app',
       title: 'Indigo App - Full Stack Ride-Hailing Platform',
       subtitle: 'Engineered real-time ride-hailing & dispatch telemetry across mobile apps and Web Admin portal using WebSockets & TanStack Query.',
@@ -21,7 +38,26 @@ export default function Projects({ isPreview = false, onNavigate }) {
         'Engineered responsive Web Admin portal with live interactive map telemetry and user session management.',
         'Optimized client-side data fetching with TanStack Query caching and automated push notification flows.'
       ],
-      featured: true
+      featured: true,
+      githubUrl: null,
+      isPrivate: true
+    },
+    {
+      id: 'bookhub',
+      title: 'Bookhub - Production-grade University Library Management System',
+      subtitle: 'Modern university library platform with Next.js 15, Turbopack, Radix UI primitives, React Hook Form, and Zod validation.',
+      longDescription: 'A production-grade library management application built with Next.js 15 and React 19. Features comprehensive book borrowing workflows, role-based member management, accessible UI components powered by Radix UI and Tailwind CSS, and robust schema validation using Zod.',
+      category: 'Full Stack',
+      role: 'Full Stack Engineer',
+      date: '2025',
+      stack: ['Next.js 15', 'React 19', 'TypeScript', 'Turbopack', 'Tailwind CSS', 'Radix UI', 'Zod', 'React Hook Form'],
+      highlights: [
+        'Architected server-side rendered catalog and borrow-tracking workflows with Next.js 15 and Turbopack.',
+        'Crafted accessible, reusable UI component library using Radix UI primitives and Tailwind CSS.',
+        'Implemented end-to-end form state management and strict schema enforcement using React Hook Form and Zod.'
+      ],
+      featured: true,
+      githubUrl: 'https://github.com/Izuuii/Bookhub---A-production-grade-University-Library-Management-System'
     },
     {
       id: 'acadflow',
@@ -37,7 +73,9 @@ export default function Projects({ isPreview = false, onNavigate }) {
         'Architected digital certificate generation engine with cryptographic verification tags.',
         'Implemented role-based access control (RBAC) for Teachers, Advisers, and School Administrators.'
       ],
-      featured: true
+      featured: true,
+      githubUrl: null,
+      isPrivate: true
     },
     {
       id: 'beemo-iot',
@@ -53,7 +91,26 @@ export default function Projects({ isPreview = false, onNavigate }) {
         'Developed interactive descriptive analytics dashboards powered by Chart.js to optimize honey production conditions.',
         'Built a web-based management platform in PHP, Bootstrap, and JavaScript for beehive parameter tracking and automated threshold alerts.'
       ],
-      featured: true
+      featured: false,
+      githubUrl: null,
+      isPrivate: true
+    },
+    {
+      id: 'farm-blog',
+      title: 'FARM Blog - Asynchronous FastAPI & Python Backend',
+      subtitle: 'Full-stack blog platform powered by Python 3.12, FastAPI async REST API, SQLAlchemy, aiosqlite, and ImageKit.io.',
+      longDescription: 'A high-performance blog platform built using the FARM stack (FastAPI, React, MongoDB/SQLite). Employs Python 3.12 with uv package management, aiosqlite async ORM querying, robust JWT authentication via fastapi-users, and cloud media delivery through ImageKit.io.',
+      category: 'Full Stack',
+      role: 'Backend / Python Developer',
+      date: '2025 – 2026',
+      stack: ['Python 3.12', 'FastAPI', 'SQLAlchemy', 'aiosqlite', 'FastAPI-Users', 'ImageKit.io', 'Uvicorn'],
+      highlights: [
+        'Engineered asynchronous REST API endpoints leveraging FastAPI and Python 3.12 with uv package manager.',
+        'Configured async database layer with SQLAlchemy and aiosqlite for non-blocking database queries.',
+        'Integrated ImageKit.io SDK for automated image optimization, transformations, and cloud hosting.'
+      ],
+      featured: false,
+      githubUrl: 'https://github.com/Izuuii/FARM-BLOG-APP'
     },
     {
       id: 'contentcraft',
@@ -69,14 +126,32 @@ export default function Projects({ isPreview = false, onNavigate }) {
         'Integrated AWS S3 cloud storage for high-availability uploading and serving of blog post media assets.',
         'Implemented secure authentication and user authorization using bcrypt password hashing and JSON Web Tokens (JWT).'
       ],
-      featured: false
+      featured: false,
+      githubUrl: 'https://github.com/Izuuii/ContentCraft---A-Scalable-Blog-Application-MERN-AWS-S3-'
+    },
+    {
+      id: 'velvet-pour',
+      title: 'Velvet Pour - GSAP Interactive Mixology Showcase',
+      subtitle: 'High-aesthetic creative web experience showcasing advanced GSAP 3 scroll-triggered animations and fluid micro-interactions.',
+      longDescription: 'A creative frontend demonstration highlighting modern animation craft. Built with React 19, Vite, and GSAP (@gsap/react), featuring synchronized scroll-driven bottle reveals, staggered typography entrances, and physics-inspired ease curves.',
+      category: 'Front-End',
+      role: 'Creative Frontend Developer',
+      date: '2025',
+      stack: ['React 19', 'GSAP 3', '@gsap/react', 'Tailwind CSS', 'Vite', 'JavaScript'],
+      highlights: [
+        'Designed bespoke timeline choreographies and scroll-triggered animations using GSAP 3 and @gsap/react.',
+        'Achieved 60fps smooth animations with hardware-accelerated transform matrix calculations.',
+        'Implemented responsive typography and fluid layouts adapting seamlessly across desktop and mobile screens.'
+      ],
+      featured: false,
+      githubUrl: 'https://github.com/Izuuii/gsap_cocktails'
     },
     {
       id: 'ai-chatbot',
       title: 'Multi-Model AI Chatbot (ChatGPT, Gemini, DeepSeek)',
       subtitle: 'Interactive web AI-powered chatbot integrating ChatGPT, Gemini, and DeepSeek models for dynamic, intelligent conversations.',
       longDescription: 'An interactive web AI-powered chatbot that integrates AI models (ChatGPT, Gemini, DeepSeek) to provide dynamic and intelligent conversations within a unified, responsive interface.',
-      category: 'AI & Web',
+      category: 'AI & Systems',
       role: 'Frontend & AI Engineer',
       date: '2024 – 2025',
       stack: ['React.js', 'Tailwind CSS', 'OpenAI API', 'Google Gemini API', 'DeepSeek API', 'JavaScript'],
@@ -85,7 +160,27 @@ export default function Projects({ isPreview = false, onNavigate }) {
         'Engineered real-time chat response handling with dynamic prompt controls and model switching.',
         'Styled custom dark/light UI themes and fluid chat component micro-interactions using Tailwind CSS.'
       ],
-      featured: false
+      featured: false,
+      githubUrl: 'https://github.com/Izuuii/react_ai-chatbot'
+    },
+    {
+      id: 'legacy-global-portal',
+      title: 'LegacyGlobal - Multi-Tenant Trade & Commodity Platform',
+      subtitle: 'Multi-tenant enterprise trade portal with 3-tier role control (Admin, Client, TriParty), KYC compliance, proposal builder & contract engine.',
+      longDescription: 'A comprehensive multi-tenant trade and commodity procurement portal engineered for Legacy Global S.A. Features strict 3-tier role separation (Admin, Client, TriParty), end-to-end client KYC document verification, interactive 3D visual canvas rendering (Three.js & OGL), dynamic proposal builder, digital contract lifecycle workflows, and PDF invoice generation.',
+      category: 'Commissions',
+      role: 'Lead Full Stack Architect',
+      date: '2025',
+      stack: ['React', 'TypeScript', 'Three.js', 'OGL', 'GSAP', 'Socket.io', 'TanStack Query', 'Radix UI', 'Tailwind CSS'],
+      highlights: [
+        'Architected 3-tier role-based access control protecting distinct operational shells for Admin, Client, and TriParty agents.',
+        'Engineered compliance KYC document upload and review interfaces with real-time verification status tracking.',
+        'Built automated proposal builder and digital contract generation engine streamlining international trade deals.',
+        'Rendered interactive 3D hero canvas elements utilizing Three.js and OGL paired with fluid GSAP transitions.'
+      ],
+      featured: true,
+      githubUrl: 'https://github.com/Legacy-Globalsa/LegacyGlobalsa-Frontend',
+      isPrivate: true
     },
     {
       id: 'appliloan',
@@ -102,7 +197,9 @@ export default function Projects({ isPreview = false, onNavigate }) {
         'Utilized DaisyUI component architecture for fast, clean, accessible UI development.',
         'Built RESTful API endpoints in Laravel for seamless client-server data synchronization.'
       ],
-      featured: false
+      featured: false,
+      githubUrl: 'https://github.com/Izuuii/AppliLoan',
+      isPrivate: true
     },
     {
       id: 'movie-app',
@@ -118,7 +215,8 @@ export default function Projects({ isPreview = false, onNavigate }) {
         'Integrated TMDB REST API to display real-time movie categories, ratings, and trailers.',
         'Implemented Appwrite backend for user authentication, session persistence, and saving favorites.'
       ],
-      featured: false
+      featured: false,
+      githubUrl: 'https://github.com/Izuuii/Watchbase---A-Production-grade-React-Native-Movie-Database'
     },
     {
       id: 'pitch-tents-clone',
@@ -134,11 +232,12 @@ export default function Projects({ isPreview = false, onNavigate }) {
         'Implemented rich micro-animations using DaisyUI and Tailwind CSS design tokens.',
         'Structured modular client-side state management with Zustand.'
       ],
-      featured: false
+      featured: false,
+      githubUrl: 'https://github.com/Izuuii/pitch-clone'
     },
   ];
 
-  const categories = ['All', 'IoT & Capstone', 'Full Stack', 'Commissions', 'AI & Web', 'Mobile App', 'Front-End'];
+  const categories = ['All', 'AI & Systems', 'Full Stack', 'Front-End', 'IoT & Capstone', 'Commissions', 'Mobile App'];
 
   const displayedProjects = isPreview
     ? projects.slice(0, 4)
