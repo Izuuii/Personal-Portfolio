@@ -150,7 +150,7 @@ export default function Sidebar({ currentPage, setCurrentPage }) {
           {/* Quick Contact Info */}
           <div className="space-y-1.5 text-[11px] font-mono">
             <a 
-              href="/DAN%20DENVER%20DE%20LEON%20(6).pdf" 
+              href="/DAN%20DENVER%20DE%20LEON%20(7).pdf" 
               download="DAN_DENVER_DE_LEON_RESUME.pdf"
               target="_blank" 
               rel="noreferrer" 

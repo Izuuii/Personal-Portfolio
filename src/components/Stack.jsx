@@ -6,6 +6,9 @@ export default function Stack({ isPreview = false, onNavigate }) {
     'Next.js 15',
     'React 19',
     'TypeScript',
+    'Anti-Gravity',
+    'Claude',
+    'MCPs',
     'Three.js',
     'Python',
     'FastAPI',
@@ -23,6 +26,7 @@ export default function Stack({ isPreview = false, onNavigate }) {
     'Radix UI',
     'Zod',
     'Vercel AI SDK',
+    'JIRA',
     'Zustand',
     'WebSockets',
     'AWS S3',
@@ -85,12 +89,15 @@ export default function Stack({ isPreview = false, onNavigate }) {
     {
       category: 'AI & SYSTEMS',
       skills: [
+        'AI Coding Agents & Automation',
+        'Autonomous Agent Workflows',
+        'Modular Agent Skills (.agents/skills)',
+        'Model Context Protocol (MCP)',
+        'LLM Pair Programming (Claude / Gemini)',
         'Vercel AI SDK',
         'Vector Embeddings (1536-dim)',
         'OpenAI GPT-4o / Gemini APIs',
         'Oxylabs & Cheerio Web Scraping',
-        'AI Coding Agents & Automation',
-        'Modular Agent Skills (.agents/skills)',
         'Prompt Engineering & Harnesses'
       ]
     },
@@ -106,11 +113,17 @@ export default function Stack({ isPreview = false, onNavigate }) {
     {
       category: 'TOOLS & UTILITIES',
       skills: [
+        'Anti-Gravity (AGY)',
+        'Claude',
+        'Cursor',
+        'VS Code',
+        'Git & GitHub',
+        'JIRA',
+        'MCPs',
         'Figma UI/UX',
-        'Cursor / VS Code',
         'Postman',
+        'Vercel',
         'uv (Python Package Manager)',
-        'Responsive Design',
         'Agile Methodology'
       ]
     }

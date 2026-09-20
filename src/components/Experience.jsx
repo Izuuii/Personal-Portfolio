@@ -18,9 +18,9 @@ export default function Experience({ isPreview = false, onNavigate }) {
         'Drove V1 to V2 infrastructure migration for competitive intelligence SaaS, resolving monorepo drift, rewiring authentication/permissions to the V2 API, and building foundational read adapters consumed across all subsequent domain migrations.',
         'Developed Knowledge Graph UI from scratch to visualize complex pharmaceutical data relationships, engineering canvas rendering, dynamic layout panels, schema tabs, and interactive node-detail views.',
         'Owned end-to-end development of internal admin console managing data-collection infrastructure, building comprehensive dashboards (Collector Health, Scope Manager) with live filtering, pagination, bulk selection, and fleet-wide operational summaries.',
-        'Built an AI Interviewer frontend from scratch and delivered early-stage feature development for multiple enterprise-level client applications.'
+        'Built an AI Interviewer frontend from scratch and accelerated enterprise client feature delivery by integrating AI coding agents, custom domain skills, and automated MCP development workflows.'
       ],
-      skills: ['React.js', 'TypeScript', 'WebSockets', 'AI Chatbots / Streaming', 'Knowledge Graph Canvas', 'V2 Migration', 'Admin Consoles', 'Tailwind CSS']
+      skills: ['React.js', 'TypeScript', 'WebSockets', 'AI Chatbots / Streaming', 'AI Coding Agents', 'MCPs & Skills Workflows', 'Knowledge Graph Canvas', 'V2 Migration', 'Admin Consoles', 'Tailwind CSS']
     },
     {
       id: 'mk-trading',

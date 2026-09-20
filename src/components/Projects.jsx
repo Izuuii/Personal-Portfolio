@@ -377,17 +377,18 @@ export default function Projects({ isPreview = false, onNavigate }) {
           {/* Architecture & Engineering Process Banner Description */}
           <div className="space-y-3 font-sans">
             <span className="badge badge-neutral font-mono text-[10px] uppercase tracking-wider">
-              Engineering Mindset & Craft
+              Agentic Engineering & Craft
             </span>
             <h3 className="text-xl font-bold tracking-tight text-base-content uppercase">
-              HOW I ENGINEER & BUILD SYSTEMS
+              HOW I ENGINEER WITH AGENTS & SKILLS
             </h3>
             <p className="text-xs text-base-content/80 leading-relaxed font-sans">
-              I approach software engineering with a product-first mindset: decomposing complex real-world requirements into modular frontend architectures, resilient backend engines, and fluid interactive user flows. By combining human-in-the-loop Vibe Engineering with <span className="font-semibold text-base-content">AI coding agents, custom agent skills, and LLM pair programming</span>, I accelerate developer iteration while ensuring high architectural craft, robust state management, and pixel-perfect polish across every project.
+              I approach modern software engineering by combining rigorous architectural discipline with high-velocity <span className="font-semibold text-base-content">agentic workflows, custom domain skills, and MCP tool connections</span>. By authoring modular agent skills (<code className="text-neutral font-mono text-[11px] bg-base-300/60 px-1 py-0.5 rounded">.agents/skills</code>) and leveraging AI coding agents (<span className="font-semibold text-base-content">Anti-Gravity, Claude, Cursor</span>), I orchestrate autonomous development loops that enforce deterministic patterns, eliminate hallucinations, and accelerate enterprise delivery while ensuring pixel-perfect visual craft and type-safe resilience.
             </p>
             <div className="flex flex-wrap gap-1.5 pt-1 font-mono text-[10px] text-base-content/70">
-              <span className="bg-base-100 px-2 py-0.5 rounded border border-base-300/60 font-semibold">MODULAR ARCHITECTURE</span>
-              <span className="bg-base-100 px-2 py-0.5 rounded border border-base-300/60 font-semibold">AI & AGENT SKILLS</span>
+              <span className="bg-base-100 px-2 py-0.5 rounded border border-base-300/60 font-semibold">MODULAR AGENT SKILLS</span>
+              <span className="bg-base-100 px-2 py-0.5 rounded border border-base-300/60 font-semibold">AGENTIC WORKFLOWS</span>
+              <span className="bg-base-100 px-2 py-0.5 rounded border border-base-300/60 font-semibold">MCP TOOL CALLING</span>
               <span className="bg-base-100 px-2 py-0.5 rounded border border-base-300/60 font-semibold">STATE CACHING</span>
               <span className="bg-base-100 px-2 py-0.5 rounded border border-base-300/60 font-semibold">REST & WEBSOCKET APIS</span>
             </div>

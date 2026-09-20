@@ -68,13 +68,13 @@ export default function HeroHeader() {
 
           {/* Engaging Narrative Bio */}
           <p className="text-xs md:text-sm text-base-content/80 leading-relaxed font-sans max-w-2xl">
-            Passionate <span className="font-semibold text-base-content">Front-End, Full-Stack & AI Engineer</span> dedicated to crafting high-aesthetic, fluid web applications with seamless user flows, responsive micro-interactions, and robust backend architectures. Driven by code aesthetics and interactive polish, I transform complex system requirements into clean, modern digital experiences that feel effortless and wow at first glance.
+            Passionate <span className="font-semibold text-base-content">Front-End, Full-Stack & AI Engineer</span> dedicated to crafting high-aesthetic, fluid web applications with seamless user flows, responsive micro-interactions, and robust backend architectures. By integrating <span className="font-semibold text-base-content">AI coding agents (Anti-Gravity, Claude, Cursor), custom agent skills (.agents/skills), MCP tooling, and automated workflows</span>, I transform complex system requirements into clean, production-grade digital experiences that feel effortless and wow at first glance.
           </p>
 
           {/* Quick Contact & Resource Links Bar */}
           <div className="flex flex-wrap items-center gap-2 pt-2 text-xs font-mono">
             <a
-              href="/DAN%20DENVER%20DE%20LEON%20(6).pdf"
+              href="/DAN%20DENVER%20DE%20LEON%20(8).pdf"
               download="DAN_DENVER_DE_LEON_RESUME.pdf"
               target="_blank"
               rel="noreferrer"
