@@ -74,7 +74,7 @@ export default function HeroHeader() {
           {/* Quick Contact & Resource Links Bar */}
           <div className="flex flex-wrap items-center gap-2 pt-2 text-xs font-mono">
             <a
-              href="/DAN%20DENVER%20DE%20LEON%20(8).pdf"
+              href="/DAN%20DENVER%20DE%20LEON%20(9).pdf"
               download="DAN_DENVER_DE_LEON_RESUME.pdf"
               target="_blank"
               rel="noreferrer"
