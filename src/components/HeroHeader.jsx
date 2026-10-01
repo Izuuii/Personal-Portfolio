@@ -45,10 +45,10 @@ export default function HeroHeader() {
           {/* Top Pill Badges */}
           <div className="flex flex-wrap items-center gap-2 text-xs font-mono">
             <span className="badge badge-neutral font-mono text-[10px] tracking-wider uppercase">
-              Full Stack & AI Engineer
+              AI Engineer
             </span>
             <span className="badge badge-outline font-mono text-[10px] tracking-wider uppercase">
-              Front-End Architecture
+              Full Stack & Front-End
             </span>
             <span className="badge badge-ghost font-mono text-[10px] text-base-content/70">
               Available for Opportunities
@@ -62,19 +62,19 @@ export default function HeroHeader() {
             </h1>
             <p className="text-sm md:text-base font-mono font-medium text-base-content/70 mt-1 flex items-center gap-2">
               <Code2 size={16} className="text-neutral-content/80" />
-              FRONT-END / FULL STACK & AI ENGINEER
+              AI ENGINEER | FULL STACK & FRONT-END · AI-NATIVE
             </p>
           </div>
 
           {/* Engaging Narrative Bio */}
           <p className="text-xs md:text-sm text-base-content/80 leading-relaxed font-sans max-w-2xl">
-            Passionate <span className="font-semibold text-base-content">Front-End, Full-Stack & AI Engineer</span> dedicated to crafting high-aesthetic, fluid web applications with seamless user flows, responsive micro-interactions, and robust backend architectures. By integrating <span className="font-semibold text-base-content">AI coding agents (Anti-Gravity, Claude, Cursor), custom agent skills (.agents/skills), MCP tooling, and automated workflows</span>, I transform complex system requirements into clean, production-grade digital experiences that feel effortless and wow at first glance.
+            AI-native <span className="font-semibold text-base-content">AI Engineer and Full Stack / Front-End Developer</span> dedicated to crafting high-aesthetic, fluid web applications with seamless user flows, responsive micro-interactions, and robust backend architectures. By integrating <span className="font-semibold text-base-content">AI coding agents (Claude Code, Cursor, Antigravity), custom agent skills (.agents/skills), MCP tooling, and automated workflows</span>, I transform complex system requirements into clean, production-grade digital experiences that feel effortless and wow at first glance.
           </p>
 
           {/* Quick Contact & Resource Links Bar */}
           <div className="flex flex-wrap items-center gap-2 pt-2 text-xs font-mono">
             <a
-              href="/DAN%20DENVER%20DE%20LEON%20(9).pdf"
+              href="/Dan-Denver-De-Leon-Resume.pdf"
               download="DAN_DENVER_DE_LEON_RESUME.pdf"
               target="_blank"
               rel="noreferrer"
@@ -101,7 +101,7 @@ export default function HeroHeader() {
               className="btn btn-outline btn-xs gap-1.5 font-mono text-[11px]"
             >
               <GithubIcon size={12} />
-              Github
+              GitHub
               <ArrowUpRight size={10} />
             </a>
             <button
@@ -129,8 +129,8 @@ export default function HeroHeader() {
         </div>
         <div className="relative p-3 rounded-xl bg-base-200/40 border border-base-300/40 overflow-hidden group">
           <div className="absolute inset-0 bg-halftone-grid opacity-20 group-hover:opacity-40 transition-opacity" />
-          <span className="relative z-10 text-base font-extrabold text-base-content block">200+</span>
-          <span className="relative z-10 text-[10px] text-base-content/60 uppercase tracking-widest block">Commits (2026)</span>
+          <span className="relative z-10 text-base font-extrabold text-base-content block">350+</span>
+          <span className="relative z-10 text-[10px] text-base-content/60 uppercase tracking-widest block">Merged PRs</span>
         </div>
         <div className="relative p-3 rounded-xl bg-base-200/40 border border-base-300/40 overflow-hidden group">
           <div className="absolute inset-0 bg-halftone-grid opacity-20 group-hover:opacity-40 transition-opacity" />

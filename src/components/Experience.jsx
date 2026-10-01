@@ -7,20 +7,23 @@ export default function Experience({ isPreview = false, onNavigate }) {
       id: 'kmc-solutions',
       year: '2025 – PRESENT',
       initials: 'KMC',
-      company: 'KMC - Solutions',
+      company: 'KMC Solutions / Anervea.ai',
       employmentType: 'Full-time · Remote',
       location: 'Philippines · Remote',
-      role: 'Jr. Full Stack Developer',
+      role: 'Junior Full Stack Developer',
       dateRange: 'DEC 2025 – PRESENT',
       duration: 'CURRENT',
       description: [
-        'Engineered AI chatbots for a central data-intelligence engine and client-facing pharmaceutical SaaS platform, implementing WebSocket answer streaming with dropped-connection recovery, multi-turn conversation persistence, and inline citation parsing with markdown theming.',
-        'Drove V1 to V2 infrastructure migration for competitive intelligence SaaS, resolving monorepo drift, rewiring authentication/permissions to the V2 API, and building foundational read adapters consumed across all subsequent domain migrations.',
-        'Developed Knowledge Graph UI from scratch to visualize complex pharmaceutical data relationships, engineering canvas rendering, dynamic layout panels, schema tabs, and interactive node-detail views.',
-        'Owned end-to-end development of internal admin console managing data-collection infrastructure, building comprehensive dashboards (Collector Health, Scope Manager) with live filtering, pagination, bulk selection, and fleet-wide operational summaries.',
-        'Built an AI Interviewer frontend from scratch and accelerated enterprise client feature delivery by integrating AI coding agents, custom domain skills, and automated MCP development workflows.'
+        'Shipped 350+ merged pull requests across 10 repositories and 8 AI-driven pharmaceutical intelligence products, closing 240+ Jira stories, tasks, and bugs in an Agile team.',
+        'Engineered AI chat assistants for a data-intelligence engine and its client-facing SaaS, with SSE and WebSocket answer streaming, dropped-connection recovery, conversation history, and inline citations.',
+        'Built a Knowledge Graph UI from scratch on a GPU-accelerated canvas, visualizing 14 pharmaceutical data domains with layout panels, schema tabs, an interactive legend, and node-detail views.',
+        'Drove the V1 to V2 API migration for a competitive-intelligence SaaS, rewiring authentication, permissions, and core screens to the new API and replacing seven polling loops with a single endpoint.',
+        'Owned the internal admin console for the data-collection infrastructure (Collector Health, Scope Manager), with server-side filtering, pagination, bulk selection, lazy loading, and caching.',
+        'Hardened a multi-tenant Python/FastAPI backend on AWS Lambda through a code audit, fixing tenant isolation, permission checks, audit logging, and async database access.',
+        'Containerized a legacy PHP + Node.js platform with Docker Compose, env-based config, and a CI test pipeline.',
+        'Built an AI Interviewer frontend from scratch and set up AI-assisted workflows (Claude Code skills, agents, MCPs) that sped up the team\'s delivery.'
       ],
-      skills: ['React.js', 'TypeScript', 'WebSockets', 'AI Chatbots / Streaming', 'AI Coding Agents', 'MCPs & Skills Workflows', 'Knowledge Graph Canvas', 'V2 Migration', 'Admin Consoles', 'Tailwind CSS']
+      skills: ['React.js', 'TypeScript', 'Python', 'FastAPI', 'AWS Lambda', 'Docker', 'SSE & WebSockets', 'AI Chat Assistants', 'Knowledge Graph Canvas', 'Claude Code, Agents & MCPs', 'Vitest', 'Tailwind CSS']
     },
     {
       id: 'mk-trading',
@@ -68,7 +71,6 @@ export default function Experience({ isPreview = false, onNavigate }) {
       dateRange: 'MAR 2025 – JUN 2025',
       duration: '4 MOS',
       description: [
-        'Received internal training in ReactJS and foundational lessons in Laravel under the guidance of the Team Lead.',
         'Integrated Laravel backend APIs with the React frontend using Axios for real-time verification in CertiCode certification platform.',
         'Designed & implemented the "Seminar History" table in user profiles and led a team of OJT interns in UI/UX redesign initiatives.',
         'Participated in Git/GitHub version control workflows and frontend responsiveness optimizations.'

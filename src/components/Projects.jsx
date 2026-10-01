@@ -31,7 +31,7 @@ export default function Projects({ isPreview = false, onNavigate }) {
       longDescription: 'Engineered during junior developer role at MK International Trading. Built end-to-end telemetry workflows across Rider App, Customer App, and Web Admin management interface using WebSockets and TanStack Query state caching.',
       category: 'Full Stack',
       role: 'Junior Full Stack Developer',
-      date: 'July 2025 – Dec 2025',
+      date: 'July 2025 – Oct 2025',
       stack: ['React Native', 'React.js', 'Node.js', 'Express.js', 'PostgreSQL', 'Firebase', 'WebSockets', 'TanStack Query'],
       highlights: [
         'Architected real-time rider location tracking and dispatch telemetry using WebSockets.',
