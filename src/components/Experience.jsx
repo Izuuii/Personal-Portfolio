@@ -19,11 +19,11 @@ export default function Experience({ isPreview = false, onNavigate }) {
         'Built a Knowledge Graph UI from scratch on a GPU-accelerated canvas, visualizing 14 pharmaceutical data domains with layout panels, schema tabs, an interactive legend, and node-detail views.',
         'Drove the V1 to V2 API migration for a competitive-intelligence SaaS, rewiring authentication, permissions, and core screens to the new API and replacing seven polling loops with a single endpoint.',
         'Owned the internal admin console for the data-collection infrastructure (Collector Health, Scope Manager), with server-side filtering, pagination, bulk selection, lazy loading, and caching.',
-        'Hardened a multi-tenant Python/FastAPI backend on AWS Lambda through a code audit, fixing tenant isolation, permission checks, audit logging, and async database access.',
+        'Hardened a Python/FastAPI backend through a code audit, fixing access control, permission checks, audit logging, and async database access.',
         'Containerized a legacy PHP + Node.js platform with Docker Compose, env-based config, and a CI test pipeline.',
         'Built an AI Interviewer frontend from scratch and set up AI-assisted workflows (Claude Code skills, agents, MCPs) that sped up the team\'s delivery.'
       ],
-      skills: ['React.js', 'TypeScript', 'Python', 'FastAPI', 'AWS Lambda', 'Docker', 'SSE & WebSockets', 'AI Chat Assistants', 'Knowledge Graph Canvas', 'Claude Code, Agents & MCPs', 'Vitest', 'Tailwind CSS']
+      skills: ['React.js', 'TypeScript', 'Python', 'FastAPI', 'Docker', 'SSE & WebSockets', 'AI Chat Assistants', 'Knowledge Graph Canvas', 'Claude Code, Agents & MCPs', 'Vitest', 'Tailwind CSS']
     },
     {
       id: 'mk-trading',
