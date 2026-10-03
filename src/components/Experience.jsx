@@ -16,7 +16,7 @@ export default function Experience({ isPreview = false, onNavigate }) {
       description: [
         'Shipped 350+ merged pull requests across 10 repositories and 8 AI-driven pharmaceutical intelligence products, closing 240+ Jira stories, tasks, and bugs in an Agile team.',
         'Engineered AI chat assistants for a data-intelligence engine and its client-facing SaaS, with SSE and WebSocket answer streaming, dropped-connection recovery, conversation history, and inline citations.',
-        'Built a Knowledge Graph UI from scratch on a GPU-accelerated canvas, visualizing 14 pharmaceutical data domains with layout panels, schema tabs, an interactive legend, and node-detail views.',
+        'Built a Knowledge Graph UI on a GPU-accelerated (WebGL) canvas using cosmos.gl, visualizing 14 pharmaceutical data domains with interactive filtering and a node-detail panel.',
         'Drove the V1 to V2 API migration for a competitive-intelligence SaaS, rewiring authentication, permissions, and core screens to the new API and replacing seven polling loops with a single endpoint.',
         'Owned the internal admin console for the data-collection infrastructure (Collector Health, Scope Manager), with server-side filtering, pagination, bulk selection, lazy loading, and caching.',
         'Built an AI Interviewer frontend from scratch and set up AI-assisted workflows (Claude Code skills, agents, MCPs) that sped up the team\'s delivery.'
@@ -42,21 +42,21 @@ export default function Experience({ isPreview = false, onNavigate }) {
     },
     {
       id: 'legacy-globalsa',
-      year: '2025',
+      year: '2025 – 2026',
       initials: 'LG',
-      company: 'Legacy Global S.A. / Independent Engagements',
-      employmentType: 'Contract · Lead Full Stack Architect',
-      location: 'Riyadh, Saudi Arabia · Remote',
-      role: 'Lead Full Stack Architect & Team Lead',
-      dateRange: 'JUL 2025 – OCT 2025',
-      duration: '4 MOS',
+      company: 'Legacy Global S.A. & Freelance Clients',
+      employmentType: 'Freelance · Contract',
+      location: 'Remote',
+      role: 'Freelance Full Stack Developer',
+      dateRange: 'JUL 2025 – MAY 2026',
+      duration: '11 MOS',
       description: [
-        'Architected LegacyGlobal: a multi-tenant international trade & commodity procurement portal with 3-tier role-based access control (Admin, Client, TriParty), integrating automated KYC document verification, proposal builders, and contract lifecycle workflows.',
-        'Led full-stack engineering of LegaShop & LGGM multi-vendor marketplaces, bridging Python/Django REST API backend services with responsive React TypeScript interfaces for store management and catalog fulfillment.',
-        'Engineered interactive 3D visualizations and real-time event telemetry utilizing Three.js, OGL, GSAP, Socket.io, and Recharts operational dashboards.',
-        'Delivered high-impact client systems including AcadFlow (DepEd reporting automation) and AppliLoan (financial analytics dashboard with Supabase RLS security).'
+        'Built the LegacyGlobal portal, a multi-role B2B platform (Admin, Client, Tri-party) for projects, proposals, contracts with email workflows, KYC documents, invoices, and PDF reports. React and TypeScript on the front end; Express, MongoDB, Socket.io, Redis, and S3 on the back end; CI/CD with GitHub Actions, PM2, and nginx.',
+        'Built LGGM, a personal-finance PWA (React, TanStack Query, Supabase with Row Level Security) with an Express API hardened with Helmet, rate limiting, and input validation.',
+        'Built order, vendor, review, and delivery-estimate features for the LegaShop marketplace API (Django REST Framework, JWT).',
+        'Led AppliLoan, a Laravel + React cooperative loan system with OTP auth, payments, QR/barcode scanning, and automated due-date emails. Also shipped multilingual (EN/AR/VI) corporate sites and 13 subsidiary brand sites.'
       ],
-      skills: ['TypeScript', 'React.js', 'Python (Django)', 'Three.js / OGL', 'GSAP', 'Socket.io', 'Supabase (RLS)', 'Radix UI', 'TanStack Query', 'Tailwind CSS']
+      skills: ['TypeScript', 'React.js', 'Node.js / Express', 'MongoDB', 'Socket.io', 'Redis', 'Python (Django REST)', 'Supabase (RLS)', 'Laravel', 'TanStack Query', 'GitHub Actions', 'Three.js / OGL']
     },
     {
       id: 'supsoft-tech',

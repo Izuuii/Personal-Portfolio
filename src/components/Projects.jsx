@@ -63,15 +63,15 @@ export default function Projects({ isPreview = false, onNavigate }) {
       id: 'acadflow',
       title: 'AcadFlow - Centralized DepEd School Forms & Analytics',
       subtitle: 'Automated reporting engine digitizing DepEd SF 1–SF 10 calculations & digital certificate generation for Castañas National High School.',
-      longDescription: 'Lead capstone & commission project designed to eliminate manual paper-based school form processing. Features automated DepEd SF 1 to SF 10 calculations, digital certificate issuance, and administrative analytics dashboards.',
+      longDescription: 'Team commission project designed to eliminate manual paper-based school form processing. Features automated DepEd SF 1 to SF 10 calculations, digital certificate issuance, and administrative analytics dashboards.',
       category: 'IoT & Capstone',
-      role: 'Team Lead & Full Stack Architect',
-      date: 'July 2025 – Present',
+      role: 'Full Stack Developer',
+      date: 'Jul – Dec 2025',
       stack: ['React.js', 'Tailwind CSS', 'DaisyUI', 'Laravel', 'MySQL', 'Zustand', 'Chart.js'],
       highlights: [
-        'Digitized complex DepEd School Forms (SF 1 - SF 10) calculations into automated web workflows.',
-        'Architected digital certificate generation engine with cryptographic verification tags.',
-        'Implemented role-based access control (RBAC) for Teachers, Advisers, and School Administrators.'
+        'Built Excel exports for DepEd School Forms SF1–SF9 that match the official formats.',
+        'Built certificate generation for students.',
+        'Built the student dashboard, grades table, attendance cards, and achievements pages.'
       ],
       featured: true,
       githubUrl: null,
@@ -165,21 +165,56 @@ export default function Projects({ isPreview = false, onNavigate }) {
     },
     {
       id: 'legacy-global-portal',
-      title: 'LegacyGlobal - Multi-Tenant Trade & Commodity Platform',
-      subtitle: 'Multi-tenant enterprise trade portal with 3-tier role control (Admin, Client, TriParty), KYC compliance, proposal builder & contract engine.',
-      longDescription: 'A comprehensive multi-tenant trade and commodity procurement portal engineered for Legacy Global S.A. Features strict 3-tier role separation (Admin, Client, TriParty), end-to-end client KYC document verification, interactive 3D visual canvas rendering (Three.js & OGL), dynamic proposal builder, digital contract lifecycle workflows, and PDF invoice generation.',
+      title: 'LegacyGlobal - Multi-Role B2B Project Portal',
+      subtitle: 'Portal connecting Legacy Global admins, clients, and tri-party partners: projects, proposals, contracts, KYC, invoices, and reports.',
+      longDescription: 'A B2B portal for Legacy Global S.A. that matches tri-party partners (legal and engineering firms) with clients. Each role has its own workspace: admins manage matching and execution, clients review proposals and sign contracts, and partners submit projects. Includes real-time updates over Socket.io, automated emails at every contract step, KYC document management, multi-role invoicing, and downloadable PDF reports.',
       category: 'Commissions',
-      role: 'Lead Full Stack Architect',
-      date: '2025',
-      stack: ['React', 'TypeScript', 'Three.js', 'OGL', 'GSAP', 'Socket.io', 'TanStack Query', 'Radix UI', 'Tailwind CSS'],
+      role: 'Full Stack Developer (top contributor)',
+      date: 'Dec 2025 – Feb 2026',
+      stack: ['React', 'TypeScript', 'TanStack Query', 'Radix UI', 'Tailwind CSS', 'Express', 'MongoDB', 'Socket.io', 'Redis', 'AWS S3', 'GitHub Actions'],
       highlights: [
-        'Architected 3-tier role-based access control protecting distinct operational shells for Admin, Client, and TriParty agents.',
-        'Engineered compliance KYC document upload and review interfaces with real-time verification status tracking.',
-        'Built automated proposal builder and digital contract generation engine streamlining international trade deals.',
-        'Rendered interactive 3D hero canvas elements utilizing Three.js and OGL paired with fluid GSAP transitions.'
+        'Built role-specific workspaces for Admin, Client, and Tri-party users, with bulk approve and reject actions.',
+        'Built the project, proposal, and contract flow, with emails when a contract is sent, signed, requested, or declined.',
+        'Implemented multi-role invoicing, a project progress timeline, and downloadable PDF reports.',
+        'Set up staging CI/CD with GitHub Actions, PM2, and nginx, and wrote the deployment guide.'
       ],
       featured: true,
       githubUrl: 'https://github.com/Legacy-Globalsa/LegacyGlobalsa-Frontend',
+      isPrivate: true
+    },
+    {
+      id: 'lggm-finance',
+      title: 'LGGM - Personal Finance PWA',
+      subtitle: 'Installable finance tracker for transactions, money accounts, obligations, and monthly budgets, secured with Supabase Row Level Security.',
+      longDescription: 'A progressive web app for tracking transactions, money accounts, obligations, and monthly budgets, with charts and an audit log. Data lives in Supabase with Row Level Security policies, behind an Express API hardened with Helmet, rate limiting, and request validation. Deployed with GitHub Actions.',
+      category: 'Full Stack',
+      role: 'Full Stack Developer (built nearly all of it)',
+      date: 'Apr – May 2026',
+      stack: ['React', 'TypeScript', 'TanStack Query', 'Supabase', 'Zod', 'React Hook Form', 'Recharts', 'PWA', 'Express', 'GitHub Actions'],
+      highlights: [
+        'Designed the Supabase schema with Row Level Security policies and an audit log.',
+        'Built transaction and money-account editing with validated forms (React Hook Form and Zod).',
+        'Made it installable as a PWA, with auto-refresh and charts built in Recharts.'
+      ],
+      featured: false,
+      githubUrl: 'https://github.com/Legacy-Globalsa/LGGM-Frontend'
+    },
+    {
+      id: 'legashop-api',
+      title: 'LegaShop - Marketplace REST API',
+      subtitle: 'Django REST Framework backend for a multi-vendor marketplace: accounts, orders, vendors, reviews, and delivery estimates.',
+      longDescription: 'The backend API for the LegaShop marketplace, built with Django REST Framework, JWT authentication, PostgreSQL, and Cloudinary for images.',
+      category: 'Commissions',
+      role: 'Backend Developer',
+      date: 'Apr – May 2026',
+      stack: ['Python', 'Django REST Framework', 'JWT', 'PostgreSQL', 'Cloudinary'],
+      highlights: [
+        'Built user account and address management, and order management that restores stock when an order is cancelled.',
+        'Built vendor features, reviews, and dashboards.',
+        'Added maps and delivery-time estimates.'
+      ],
+      featured: false,
+      githubUrl: null,
       isPrivate: true
     },
     {
@@ -188,14 +223,14 @@ export default function Projects({ isPreview = false, onNavigate }) {
       subtitle: 'Web-Based Information Management & Descriptive Analytics System for Sariaya Multi-Purpose Cooperative.',
       longDescription: 'AppliLoan improves cooperative operations by handling appliance loan applications and client records while incorporating descriptive analytics capabilities for administrators to gain actionable insights.',
       category: 'Commissions',
-      role: 'Team Leader & Freelance Dev',
-      date: 'July 2025 – Present',
+      role: 'Lead Developer (Freelance)',
+      date: 'Jul – Nov 2025',
       stack: ['React.js', 'Tailwind CSS', 'DaisyUI', 'Laravel', 'MySQL', 'Zustand'],
       highlights: [
-        'Designed and developed a web-based system to optimize applicant tracking for cooperative members.',
-        'Incorporated descriptive analytics dashboards enabling administrators to gain valuable operational insights.',
-        'Utilized DaisyUI component architecture for fast, clean, accessible UI development.',
-        'Built RESTful API endpoints in Laravel for seamless client-server data synchronization.'
+        'Built loan applications, payment integration, and interest calculations (5% per term, capped at 25%).',
+        'Added OTP sign-up and password reset, plus automated emails for approvals, due-soon, and past-due payments.',
+        'Built QR and barcode scanning for clerks, member dividends, and analytics dashboards for administrators.',
+        'Built the Laravel REST API and deployed the system.'
       ],
       featured: false,
       githubUrl: 'https://github.com/Izuuii/AppliLoan',
