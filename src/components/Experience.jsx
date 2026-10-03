@@ -19,6 +19,7 @@ export default function Experience({ isPreview = false, onNavigate }) {
         'Built a Knowledge Graph UI on a GPU-accelerated (WebGL) canvas using cosmos.gl, visualizing 14 pharmaceutical data domains with interactive filtering and a node-detail panel.',
         'Drove the V1 to V2 API migration for a competitive-intelligence SaaS, rewiring authentication, permissions, and core screens to the new API and replacing seven polling loops with a single endpoint.',
         'Owned the internal admin console for the data-collection infrastructure (Collector Health, Scope Manager), with server-side filtering, pagination, bulk selection, lazy loading, and caching.',
+        'Wrote focused Vitest regression tests for QA-reported bugs and kept PRs small and well documented.',
         'Built an AI Interviewer frontend from scratch and set up AI-assisted workflows (Claude Code skills, agents, MCPs) that sped up the team\'s delivery.'
       ],
       skills: ['React.js', 'TypeScript', 'Python', 'FastAPI', 'Docker', 'SSE & WebSockets', 'AI Chat Assistants', 'Knowledge Graph Canvas', 'Claude Code, Agents & MCPs', 'Vitest', 'Tailwind CSS']
@@ -54,7 +55,8 @@ export default function Experience({ isPreview = false, onNavigate }) {
         'Built the LegacyGlobal portal, a multi-role B2B platform (Admin, Client, Tri-party) for projects, proposals, contracts with email workflows, KYC documents, invoices, and PDF reports. React and TypeScript on the front end; Express, MongoDB, Socket.io, Redis, and S3 on the back end; CI/CD with GitHub Actions, PM2, and nginx.',
         'Built LGGM, a personal-finance PWA (React, TanStack Query, Supabase with Row Level Security) with an Express API hardened with Helmet, rate limiting, and input validation.',
         'Built order, vendor, review, and delivery-estimate features for the LegaShop marketplace API (Django REST Framework, JWT).',
-        'Led AppliLoan, a Laravel + React cooperative loan system with OTP auth, payments, QR/barcode scanning, and automated due-date emails. Also shipped multilingual (EN/AR/VI) corporate sites and 13 subsidiary brand sites.'
+        'Led AppliLoan, a Laravel + React cooperative loan system with OTP auth, payments, QR/barcode scanning, and automated due-date emails.',
+        'Delivered 23 freelance projects in total: 5 web applications and 18 business websites, including multilingual (EN/AR/VI) corporate sites. 15 of the sites are live on Vercel.'
       ],
       skills: ['TypeScript', 'React.js', 'Node.js / Express', 'MongoDB', 'Socket.io', 'Redis', 'Python (Django REST)', 'Supabase (RLS)', 'Laravel', 'TanStack Query', 'GitHub Actions', 'Three.js / OGL']
     },

@@ -197,7 +197,8 @@ export default function Projects({ isPreview = false, onNavigate }) {
         'Made it installable as a PWA, with auto-refresh and charts built in Recharts.'
       ],
       featured: false,
-      githubUrl: 'https://github.com/Legacy-Globalsa/LGGM-Frontend'
+      githubUrl: 'https://github.com/Legacy-Globalsa/LGGM-Frontend',
+      liveUrl: 'https://lggm.vercel.app'
     },
     {
       id: 'legashop-api',
@@ -212,6 +213,42 @@ export default function Projects({ isPreview = false, onNavigate }) {
         'Built user account and address management, and order management that restores stock when an order is cancelled.',
         'Built vendor features, reviews, and dashboards.',
         'Added maps and delivery-time estimates.'
+      ],
+      featured: false,
+      githubUrl: null,
+      isPrivate: true
+    },
+    {
+      id: 'legacy-business-websites',
+      title: '18 Business Websites for Legacy Global S.A. & Subsidiaries',
+      subtitle: 'Corporate and brand websites for the Legacy Global group: 15 live on Vercel, plus multilingual (EN/AR/VI) corporate sites.',
+      longDescription: 'Over Nov 2025 – May 2026 I built and shipped 18 business websites for Legacy Global S.A. and its subsidiary brands: construction, logistics, fitness, oil, real estate, tech, creative services, and more. They include the multilingual Legacy Global and Oasis360 corporate sites (English, Arabic, Vietnamese) with animated backgrounds, a booking page, and Docker/nginx deployment, plus 16 subsidiary brand sites deployed on Vercel. A few started as Lovable-generated scaffolds that I customized and deployed.',
+      category: 'Commissions',
+      role: 'Frontend Developer',
+      date: 'Nov 2025 – May 2026',
+      stack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'GSAP', 'Three.js / OGL', 'i18next', 'Docker', 'nginx', 'Vercel'],
+      highlights: [
+        'Shipped 18 business websites across the Legacy Global group; 15 are live on Vercel (links below).',
+        'Built the Legacy Global and Oasis360 corporate sites in English, Arabic, and Vietnamese (i18next), with animated backgrounds and a booking page.',
+        'Containerized the corporate sites with Docker and nginx, and set up Vercel deployments for the subsidiary sites.',
+        'Kept every site responsive across desktop, tablet, and mobile.'
+      ],
+      links: [
+        { label: 'LegaBuild', url: 'https://lega-build.vercel.app' },
+        { label: 'LegaCreativ', url: 'https://legacreativ.vercel.app' },
+        { label: 'LegaDeal', url: 'https://legadeal.vercel.app' },
+        { label: 'LegaExpress', url: 'https://legaexpress.vercel.app' },
+        { label: 'LegaFab', url: 'https://legafab.vercel.app' },
+        { label: 'LegaFit', url: 'https://legafit.vercel.app' },
+        { label: 'LegaForce', url: 'https://legaforce-ten.vercel.app' },
+        { label: 'LegaHub', url: 'https://lega-hub.vercel.app' },
+        { label: 'LegaLand', url: 'https://legaland.vercel.app' },
+        { label: 'LegaOil', url: 'https://legaoil.vercel.app' },
+        { label: 'LegaServ', url: 'https://legaserv.vercel.app' },
+        { label: 'LegaWorkx', url: 'https://lega-workx.vercel.app' },
+        { label: 'LegaTech', url: 'https://legatech-lemon.vercel.app' },
+        { label: 'LegaLink', url: 'https://legalink-mu.vercel.app' },
+        { label: 'Oriental Metals', url: 'https://oriental-metals-connect.vercel.app' }
       ],
       featured: false,
       githubUrl: null,

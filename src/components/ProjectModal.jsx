@@ -72,6 +72,30 @@ export default function ProjectModal({ project, onClose }) {
             </ul>
           </div>
 
+          {/* Live Links List */}
+          {project.links?.length > 0 && (
+            <div>
+              <h4 className="font-mono text-xs uppercase tracking-wider text-base-content/60 mb-2 flex items-center gap-1.5">
+                <ExternalLink size={13} />
+                Live Sites
+              </h4>
+              <div className="flex flex-wrap gap-1.5">
+                {project.links.map((link) => (
+                  <a
+                    key={link.url}
+                    href={link.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="badge badge-outline font-mono text-[11px] px-2.5 py-1 gap-1 hover:border-neutral"
+                  >
+                    {link.label}
+                    <ExternalLink size={10} />
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Tech Stack List */}
           <div>
             <h4 className="font-mono text-xs uppercase tracking-wider text-base-content/60 mb-2 flex items-center gap-1.5">
@@ -107,6 +131,17 @@ export default function ProjectModal({ project, onClose }) {
             >
               Close
             </button>
+            {project.liveUrl && (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-sm btn-outline font-mono text-xs gap-1.5"
+              >
+                Live Site
+                <ExternalLink size={12} />
+              </a>
+            )}
             {project.githubUrl ? (
               <a 
                 href={project.githubUrl} 
